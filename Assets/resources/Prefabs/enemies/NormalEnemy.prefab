@@ -15,8 +15,7 @@ GameObject:
   - component: {fileID: 6722532583959392328}
   - component: {fileID: 4027205542800942811}
   - component: {fileID: 8639450489157587629}
-  - component: {fileID: 3110371823464880080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NormalEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -135,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 41200724471940420}
-  enemyCollider: {fileID: 3222439794438355985}
+  goal: {x: 0, y: 0}
 --- !u!114 &4027205542800942811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,17 +166,3 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5654705793277064686, guid: 2678bb3c7f3fd784f981614969aee1c3,
     type: 3}
   player: {fileID: 0}
---- !u!114 &3110371823464880080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086260596285717193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac5ad1b7647aea74999c533ec6b82da5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleFactor: 1
-  scaleMultiplier: 1

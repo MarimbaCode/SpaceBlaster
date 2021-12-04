@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.U2D;
 
 namespace CameraMovements
 {
     public class CameraMovement : MonoBehaviour
     {
-
+        public PixelPerfectCamera pixelPerfectCamera;
         public Vector2 llBounds, urBounds;
         public float scale;
         
@@ -64,8 +65,9 @@ namespace CameraMovements
                 transform.position = position;
 
                 Camera currentCamera = GetComponent<Camera>();
-                currentCamera.orthographicSize += (scale - currentCamera.orthographicSize) * 0.1f;
-
+                float newSize = currentCamera.orthographicSize + (scale - currentCamera.orthographicSize) * 0.1f;
+                currentCamera.orthographicSize = newSize;
+                pixelPerfectCamera.assetsPPU = Mathf.RoundToInt(32 *  (5 / scale));
 
             }
         }

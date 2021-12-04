@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class BulletMovement : MonoBehaviour
 {
@@ -21,8 +22,9 @@ public class BulletMovement : MonoBehaviour
     void Start()
     {
         _life = Life;
-        rb.velocity = direction * 2;
-
+        rb.velocity = direction * 4;
+        float angle = Mathf.Atan2(direction.y, direction.x);
+        transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg - 90);
     }
 
     void FixedUpdate()
@@ -31,6 +33,24 @@ public class BulletMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        float angle = Mathf.Atan2(direction.y, direction.x);
+        transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg - 90);
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag.Equals("Border"))
+        {
+            Destroy(gameObject);
+        }else if (other.gameObject.GetComponent<Life>() != null)
+        {
+            String otherSide = other.gameObject.GetComponent<Life>().side;
+            if (!otherSide.Equals(side))
+            {
+                other.gameObject.GetComponent<Life>().Damage(damage);
+                Destroy(gameObject);
+            }
+        }
+    }
 }

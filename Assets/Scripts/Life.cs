@@ -20,23 +20,16 @@ public class Life : MonoBehaviour
         _life = maxLife;
         manager = GameObject.FindWithTag("GameController").GetComponent<LevelManager>();
     }
-    
-    
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        GameObject otherObject = other.gameObject;
-        BulletMovement proj = otherObject.GetComponent<BulletMovement>();
-        if(proj == null){return;}
-        if (!proj.side.Equals(side))
-        {
-            _life -= proj.damage;
-            proj.pierce--;
 
-            if (_life <= 0)
-            {
-                manager.GameDeath(id);
-                Destroy(gameObject);
-            }
+    public void Damage(int damage)
+    {
+        _life -= damage;
+        if (_life <= 0)
+        {
+            manager.GameDeath(id);
+            Destroy(gameObject);
         }
     }
 }
+
+

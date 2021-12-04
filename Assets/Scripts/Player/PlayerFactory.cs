@@ -8,6 +8,8 @@ namespace Player
 {
     public class PlayerFactory : MonoBehaviour
     {
+        public bool overrideAttack;
+        public String newAttack;
 
         public GameObject playerPrefab;
 
@@ -26,14 +28,24 @@ namespace Player
         {
             String firingPattern = PlayerPrefs.GetString("PlayerFiringPattern");
 
+            if (overrideAttack)
+            {
+                firingPattern = newAttack;
+            }
+
             switch (firingPattern)
             {
-                case "Single":
-                    newPlayer.AddComponent<PlayerFireSingle>();
+                case "SolarSingle":
+                    newPlayer.AddComponent<PlayerFireSolarBolt>();
                     break;
-                
+                case "NebulaSingle":
+                    newPlayer.AddComponent<PlayerFireNebulaBolt>();
+                    break;
+                case "VortexSingle":
+                    newPlayer.AddComponent<PlayerFireVortexBolt>();
+                    break;
                 default:
-                    newPlayer.AddComponent<PlayerFireSingle>();
+                    newPlayer.AddComponent<PlayerFireSolarBolt>();
                     break;
             }
         }

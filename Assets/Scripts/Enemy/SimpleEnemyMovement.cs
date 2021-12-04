@@ -9,17 +9,16 @@ namespace Enemy
 
         private GameObject _player;
         public Rigidbody2D rb;
-        public CircleCollider2D enemyCollider;
-
-
+        
+        public Vector2 goal;
+        private Vector2 _playerSeenPosition;
+        private Vector2 _startPosition;
+        
         private const int Speed = 10;
 
         private int _orbitDirection;
 
-
-        public PathNode aim;
-        public int pos;
-
+        
 
         private ContactFilter2D _filter;
 
@@ -32,8 +31,9 @@ namespace Enemy
             _filter = new ContactFilter2D
             {
                 useTriggers = true,
-
             };
+
+            _startPosition = transform.position;
 
         }
 
@@ -41,8 +41,12 @@ namespace Enemy
         void FixedUpdate()
         {
             _player = GameObject.FindWithTag("Player");
+            Movement();
+        }
 
-            Vector2 position = transform.position;
+
+        public void Movement()
+        {
             Vector2 playerPosition = _player.transform.position;
 
             bool foundPlayer = FindPlayer();
@@ -51,19 +55,17 @@ namespace Enemy
             {
                 if (foundPlayer)
                 {
-                    Move(playerPosition);
-                    aim = null;
+                    _playerSeenPosition = playerPosition;
                 }
-                else
-                {
-                    // PathFind();
 
-                    Vector2 goal = PathFind();
-
-                    Move(goal);
-
-                }
+                goal = _playerSeenPosition;
             }
+
+            if (GetComponent<Aggro>().persuit)
+            {
+                Move();
+            }
+            
         }
 
         bool FindPlayer()
@@ -71,7 +73,7 @@ namespace Enemy
             Vector2 position = transform.position;
             Vector2 playerPosition = _player.transform.position;
             Vector2 direction = playerPosition - position;
-            RaycastHit2D[] hit = new RaycastHit2D[10];
+            RaycastHit2D[] hit = new RaycastHit2D[4];
             GetComponent<CircleCollider2D>().Raycast(direction.normalized, _filter, hit, 100);
 
             bool foundPlayer = false;
@@ -97,7 +99,7 @@ namespace Enemy
             return foundPlayer;
         }
 
-        void Move(Vector2 goal)
+        void Move()
         {
             Vector2 direction = goal - (Vector2) transform.position;
 
@@ -119,58 +121,7 @@ namespace Enemy
             }
         }
 
-        private Vector2 PathFind()
-        {
-
-            GameObject[] nodes = GameObject.FindGameObjectsWithTag("Pathfinding");
-
-            Debug.Log(nodes.Length);
-
-            PathNode closest = null;
-
-            foreach (GameObject node in nodes)
-            {
-                Vector2 direction = (node.transform.position - transform.position);
-
-                RaycastHit2D[] hits = new RaycastHit2D[100];
-                GetComponent<CircleCollider2D>().Raycast(direction, hits, 100f);
-
-                foreach (RaycastHit2D hit in hits)
-                {
-                    if (hit.collider.gameObject.tag.Equals("Border"))
-                    {
-                        break;
-                    }
-
-                    if (hit.collider.gameObject.tag.Equals("Pathfinding"))
-                    {
-                        PathNode foundNode = hit.collider.gameObject.GetComponent<PathNode>();
-                        if (closest == null)
-                        {
-                            closest = foundNode;
-                        }
-                        else
-                        {
-                            if (closest.GETDepth() > foundNode.GETDepth())
-                            {
-                                closest = foundNode;
-                            }
-                        }
-                    }
-                }
-
-
-            }
-
-            if (closest != null)
-            {
-                return closest.transform.position;
-            }
-            else
-            {
-                return transform.position;
-            }
-        }
+        
 
     }
 }

@@ -40,7 +40,7 @@ namespace Enemy
 
         void Fire()
         {
-            BulletMovement projectile = Instantiate(bulletPrefab, transform.position, Quaternion.identity)
+            BulletMovement projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(_aim.normalized * 0.5f), Quaternion.identity)
                 .GetComponent<BulletMovement>();
             projectile.direction = _aim.normalized * 4;
             projectile.side = "ENEMY";

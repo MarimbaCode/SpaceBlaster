@@ -1,15 +1,22 @@
 ﻿
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CircleCollider2D playerCollider;
     public Rigidbody2D rb;
+    public Camera mainCamera;
 
     private const int Force = 30;
 
     private bool _aPress, _sPress, _dPress, _wPress;
-    
+
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
 
     // Update is called once per frame
     void Update()
@@ -35,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0,Force));
         }
+
+        Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg - 90);
+        
     }
 
     void GetInput()
