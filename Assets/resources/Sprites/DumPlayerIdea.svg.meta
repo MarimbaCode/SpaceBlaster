@@ -1,24 +1,36 @@
 fileFormatVersion: 2
 guid: 428188202e1ac854caa2f4eb0bf42fa9
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: gameObject/DumPlayerIdea
-    400000: gameObject/DumPlayerIdea/Transform
-    21200000: gameObject/DumPlayerIdea/SpriteRenderer
-    21300000: sprite
-    100100000: gameObject
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: gameObject/DumPlayerIdea
+  - first:
+      4: 400000
+    second: gameObject/DumPlayerIdea/Transform
+  - first:
+      212: 21200000
+    second: gameObject/DumPlayerIdea/SpriteRenderer
+  - first:
+      213: 21300000
+    second: sprite
+  - first:
+      1001: 100100000
+    second: gameObject
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
   svgType: 0
   texturedSpriteMeshType: 0
-  svgPixelsPerUnit: 100
+  svgPixelsPerUnit: 320
   gradientResolution: 128
   alignment: 0
   customPivot: {x: 0, y: 0}
   generatePhysicsShape: 0
+  viewportOptions: 0
   preserveViewport: 0
   advancedMode: 0
   predefinedResolutionIndex: 1
@@ -54,4 +66,5 @@ ScriptedImporter:
         width: 0
         height: 0
       spriteID: 3afd4aa9d88b5984a8ee99374a35ea6b
+      internalID: 0
     PhysicsOutlines: []
