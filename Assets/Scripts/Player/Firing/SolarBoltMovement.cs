@@ -15,6 +15,15 @@ public class SolarBoltMovement : MonoBehaviour
 
     private const int Life = 100;
     private int _life;
+
+    public ParticleSystem particles;
+
+    void DetachParticles()
+    {
+        particles.transform.parent = null;
+        particles.Stop();
+    }
+    
     
     void Start()
     {
@@ -32,6 +41,8 @@ public class SolarBoltMovement : MonoBehaviour
 
         if (_life-- <= 0 || pierce <= 0)
         {
+            
+            
             Destroy(gameObject);
         }
 
@@ -42,12 +53,14 @@ public class SolarBoltMovement : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Border"))
         {
+            DetachParticles();
             Destroy(gameObject);
         }else if (other.gameObject.GetComponent<Life>() != null)
         {
             String otherSide = other.gameObject.GetComponent<Life>().side;
             if (!otherSide.Equals(side))
             {
+                DetachParticles();
                 other.gameObject.GetComponent<Life>().Damage(damage);
                 Destroy(gameObject);
             }

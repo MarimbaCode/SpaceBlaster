@@ -11,7 +11,7 @@ namespace Player.Firing
         {
             Init();
 
-            FireSpeed = 1;
+            FireSpeed = 0.8f;
 
             bulletPrefab = Resources.Load(PrefabPath + "SolarBolt") as GameObject;
         }

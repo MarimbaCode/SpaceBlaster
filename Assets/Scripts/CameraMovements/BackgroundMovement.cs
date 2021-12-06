@@ -15,7 +15,7 @@ namespace CameraMovements
             
             Vector3 newPos = (Vector3) startOffset + _cameraTransform.position * -0.2f + _cameraTransform.position;
 
-            newPos.z = 100;
+            newPos.z = 10;
 
             transform.position = newPos;
         }

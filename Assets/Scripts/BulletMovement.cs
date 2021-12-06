@@ -15,8 +15,7 @@ public class BulletMovement : MonoBehaviour
 
     private const int Life = 100;
     private int _life;
-    
-    
+
 
 
     void Start()
@@ -49,6 +48,7 @@ public class BulletMovement : MonoBehaviour
             if (!otherSide.Equals(side))
             {
                 other.gameObject.GetComponent<Life>().Damage(damage);
+
                 Destroy(gameObject);
             }
         }

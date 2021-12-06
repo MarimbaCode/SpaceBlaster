@@ -21,12 +21,13 @@ namespace Player.Firing
         {
             MainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         }
+        
 
         void FixedUpdate()
         {
             FireRate = (int)(Cooldown * FireSpeed * Strength);
             Aim();
-            if (_cooldown-- <= 0 && Input.GetMouseButton(0))
+            if ((_cooldown-- <= 0 && Input.GetMouseButton(0)))
             {
                 _cooldown = FireRate;
                 Fire();

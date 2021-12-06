@@ -45,3 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 3603545637
+    locked: 0
+  - name: Wall
+    uniqueID: 899189985
+    locked: 0
+  - name: Entities
+    uniqueID: 1327077919
+    locked: 0
+  - name: UI
+    uniqueID: 3751613333
+    locked: 0
