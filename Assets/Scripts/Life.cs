@@ -26,10 +26,19 @@ public class Life : MonoBehaviour
         _life -= damage;
         if (_life <= 0)
         {
-            manager.GameDeath(id);
-            Destroy(gameObject);
+
+            if (id.Equals("Player"))
+            {
+                manager.RespawnPlayer();
+                Destroy(gameObject);
+            }
+            else
+            {
+                manager.GameDeath(id);
+                Destroy(gameObject);
+            }
         }
+        
+        
     }
 }
-
-

@@ -23,6 +23,7 @@ namespace Player
 
             return newPlayer;
         }
+        
 
         private void GetPlayerFiring(GameObject newPlayer)
         {

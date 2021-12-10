@@ -33,7 +33,6 @@ namespace Player.Firing
                 Fire();
             }
 
-            Strength = GetComponent<PlayerStrengthScale>().multiplier;
         }
         void Aim()
         {

@@ -8,7 +8,7 @@ namespace LevelManagers.Managers
     public class Level1Manager : LevelManager
     {
 
-        public GameObject wall1;
+        public GameObject door1;
         
         private List<GameObject> _enemies;
 
@@ -16,16 +16,26 @@ namespace LevelManagers.Managers
         private int _stateTemp;
         private int _stateActive;
 
+        private int enemyADeaths;
+
         void Start()
         {
             Init();
             _state = 0;
             _stateTemp = 0;
+            lives = 5;
+            
             UpdateState();
         }
         
         private void FixedUpdate()
         {
+
+            if (enemyADeaths >= 4)
+            {
+                Destroy(door1);
+            }
+            
             switch (_state)
             {
                 
@@ -45,8 +55,8 @@ namespace LevelManagers.Managers
         {
             switch (id)
             {
-                case"1":
-                    _stateTemp++;
+                case"A":
+                    enemyADeaths++;
                     break;
                 case"boss":
                     break;

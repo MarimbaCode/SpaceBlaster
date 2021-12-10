@@ -12,9 +12,9 @@ namespace CameraMovements
         
         void Update()
         {
+            GameObject player = GameObject.FindWithTag("Player");
             if (GameObject.FindWithTag("Player") != null)
             {
-                GameObject player = GameObject.FindWithTag("Player");
                 Vector2 goalPosition = player.transform.position;
                 var position = transform.position;
 
@@ -67,7 +67,6 @@ namespace CameraMovements
                 Camera currentCamera = GetComponent<Camera>();
                 float newSize = currentCamera.orthographicSize + (scale - currentCamera.orthographicSize) * 0.1f;
                 currentCamera.orthographicSize = newSize;
-                pixelPerfectCamera.assetsPPU = Mathf.RoundToInt(32 *  (5 / scale));
 
             }
         }

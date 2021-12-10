@@ -15,62 +15,13 @@ C:/Users/dearaujo_882564/Documents/Space Blaster
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-61694
+55751
 Successfully changed project path to: C:/Users/dearaujo_882564/Documents/Space Blaster
 C:/Users/dearaujo_882564/Documents/Space Blaster
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 549.62 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 8413.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.24f1 (79c78de19888)
 [Subsystems] Discovering subsystems at path C:/Users/dearaujo_882564/Documents/Unity 2020.3.24f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/dearaujo_882564/Documents/Space Blaster/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 605 (ID=0x3184)
-    Vendor:   
-    VRAM:     1959 MB
-    Driver:   23.20.16.4973
-Initialize mono
-Mono path[0] = 'C:/Users/dearaujo_882564/Documents/Unity 2020.3.24f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Users/dearaujo_882564/Documents/Unity 2020.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Users/dearaujo_882564/Documents/Unity 2020.3.24f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Users/dearaujo_882564/Documents/Unity 2020.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011743 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 682.65 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.024 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3025ms)
-		BeginReloadAssembly (257ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (0ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (2586ms)
-			LoadAssemblies (256ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (444ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (140ms)
-			SetupLoadedEditorAssemblies (1539ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (683ms)
-				BeforeProcessingInitializeOnLoad (122ms)
-				ProcessInitializeOnLoadAttributes (570ms)
-				ProcessInitializeOnLoadMethodAttributes (149ms)
-				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (0ms)
-Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.210214 seconds.
