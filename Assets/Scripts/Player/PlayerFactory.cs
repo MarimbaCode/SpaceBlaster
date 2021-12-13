@@ -2,6 +2,7 @@
 using LevelManagers;
 using LevelManagers.Managers;
 using Player.Firing;
+using Player.MovementAbilities;
 using UnityEngine;
 
 namespace Player
@@ -17,7 +18,9 @@ namespace Player
         {
             GameObject newPlayer = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
             
+            
             GetPlayerFiring(newPlayer);
+            GetPlayerMovement(newPlayer);
 
             GetPlayerLife(newPlayer, manager);
 
@@ -47,6 +50,26 @@ namespace Player
                     break;
                 default:
                     newPlayer.AddComponent<PlayerFireSolarBolt>();
+                    break;
+            }
+        }
+        private void GetPlayerMovement(GameObject newPlayer)
+        {
+            String firingPattern = PlayerPrefs.GetString("PlayerFiringPattern");
+
+            if (overrideAttack)
+            {
+                firingPattern = newAttack;
+            }
+
+            switch (firingPattern)
+            {
+                
+                case "SolarBoost":
+                    Instantiate(Resources.Load<GameObject>("Prefabs/player/Abilities/SolarBoost"), newPlayer.transform);
+                    break;
+                default:
+                    Instantiate(Resources.Load<GameObject>("Prefabs/player/Abilities/SolarBoost"), newPlayer.transform);
                     break;
             }
         }

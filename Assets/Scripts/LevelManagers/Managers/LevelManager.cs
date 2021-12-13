@@ -19,6 +19,9 @@ namespace LevelManagers.Managers
         
         protected System.Random Rnd;
 
+        public int maxEnergy;
+        public int energyRecharge;
+
         public int gameState = 0;
     
         protected void Init()
@@ -47,8 +50,10 @@ namespace LevelManagers.Managers
         public IEnumerator SpawnPlayerDelayed()
         {
             yield return new WaitForSeconds(3);
-            player = playerFactory.Create(this);
-
+            if (player == null)
+            {
+                player = playerFactory.Create(this);
+            }
         }
     }
 }

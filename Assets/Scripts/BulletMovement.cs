@@ -11,16 +11,13 @@ public class BulletMovement : MonoBehaviour
     public String side;
 
     public int damage;
-    public int pierce;
+    public int pierce = 1;
 
-    private const int Life = 100;
-    private int _life;
-
+    public int life;
 
 
     void Start()
     {
-        _life = Life;
         rb.velocity = direction * 4;
         float angle = Mathf.Atan2(direction.y, direction.x);
         transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg - 90);
@@ -28,7 +25,7 @@ public class BulletMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_life-- <= 0 || pierce <= 0)
+        if (life-- <= 0 || pierce <= 0)
         {
             Destroy(gameObject);
         }
@@ -37,7 +34,7 @@ public class BulletMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg - 90);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag.Equals("Border"))
         {
@@ -47,9 +44,11 @@ public class BulletMovement : MonoBehaviour
             String otherSide = other.gameObject.GetComponent<Life>().side;
             if (!otherSide.Equals(side))
             {
-                other.gameObject.GetComponent<Life>().Damage(damage);
-
-                Destroy(gameObject);
+                if (--pierce <= 0)
+                {
+                    other.gameObject.GetComponent<Life>().Damage(damage);
+                    Destroy(gameObject);
+                }
             }
         }
     }

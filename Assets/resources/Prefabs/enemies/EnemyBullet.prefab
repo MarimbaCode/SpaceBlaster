@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1614257133399244431}
   - component: {fileID: 8480587462349188057}
   - component: {fileID: 5350685848515930415}
-  - component: {fileID: 1822714295783452170}
   m_Layer: 12
   m_Name: EnemyBullet
   m_TagString: Projectile
@@ -120,6 +119,7 @@ MonoBehaviour:
   side: 
   damage: 1
   pierce: 1
+  life: 100
 --- !u!50 &5350685848515930415
 Rigidbody2D:
   serializedVersion: 4
@@ -141,29 +141,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &1822714295783452170
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654705793277064686}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.08, y: 0.08}
-    newSize: {x: 0.08, y: 0.08}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.08, y: 0.08}
-  m_EdgeRadius: 0

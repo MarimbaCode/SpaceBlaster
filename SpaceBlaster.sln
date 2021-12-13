@@ -3,16 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6c98943c-a75a-58bf-e01b-eecbf4048afc}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{707d8c28-18e2-e565-8591-6357434a5389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{91f6a11a-289f-3d52-37a8-cf668e585da7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{4b4c9f1d-d75c-41a3-c3aa-5e609fb0c74a}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6c98943c-a75a-58bf-e01b-eecbf4048afc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6c98943c-a75a-58bf-e01b-eecbf4048afc}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6c98943c-a75a-58bf-e01b-eecbf4048afc}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6c98943c-a75a-58bf-e01b-eecbf4048afc}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707d8c28-18e2-e565-8591-6357434a5389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707d8c28-18e2-e565-8591-6357434a5389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91f6a11a-289f-3d52-37a8-cf668e585da7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91f6a11a-289f-3d52-37a8-cf668e585da7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4b4c9f1d-d75c-41a3-c3aa-5e609fb0c74a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4b4c9f1d-d75c-41a3-c3aa-5e609fb0c74a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

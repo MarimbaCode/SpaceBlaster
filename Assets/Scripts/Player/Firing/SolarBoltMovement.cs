@@ -13,7 +13,7 @@ public class SolarBoltMovement : MonoBehaviour
     public int damage;
     public int pierce;
 
-    private const int Life = 100;
+    private const int Life = 30;
     private int _life;
 
     public ParticleSystem particles;
@@ -49,7 +49,7 @@ public class SolarBoltMovement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag.Equals("Border"))
         {
@@ -60,9 +60,12 @@ public class SolarBoltMovement : MonoBehaviour
             String otherSide = other.gameObject.GetComponent<Life>().side;
             if (!otherSide.Equals(side))
             {
-                DetachParticles();
-                other.gameObject.GetComponent<Life>().Damage(damage);
-                Destroy(gameObject);
+                    other.gameObject.GetComponent<Life>().Damage(damage);
+                if (--pierce <= 0)
+                {
+                    DetachParticles();
+                    Destroy(gameObject);
+                }
             }
         }
     }

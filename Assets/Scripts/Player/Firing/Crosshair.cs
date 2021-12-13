@@ -1,28 +1,28 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Crosshair : MonoBehaviour
+namespace Player.Firing
 {
-    private void Start()
+    public class Crosshair : MonoBehaviour
     {
-        Cursor.visible = false;
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-        Camera camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-
-        if (camera != null)
+        private void Start()
         {
-            Vector3 position = camera.ScreenToWorldPoint(Input.mousePosition);
-            position.z = 3;
-            transform.position = position;
-
+            Cursor.visible = false;
         }
+
+        // Update is called once per frame
+        void FixedUpdate()
+        {
         
+            Camera camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+
+            if (camera != null)
+            {
+                Vector3 position = camera.ScreenToWorldPoint(Input.mousePosition);
+                position.z = 0;
+                transform.position = position;
+
+            }
+        }
     }
 }

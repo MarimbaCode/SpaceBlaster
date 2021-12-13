@@ -21,7 +21,7 @@ namespace Player.Firing
             GameObject projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(AimDirection.normalized * 0.2f), Quaternion.identity);
             SolarBoltMovement movement = projectile.GetComponent<SolarBoltMovement>();
             movement.side = "player";
-            movement.pierce = 2;
+            movement.pierce = 1;
             movement.damage = 1;
             movement.direction = AimDirection.normalized * 6;
         }

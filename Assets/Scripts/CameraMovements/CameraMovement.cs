@@ -53,11 +53,11 @@ namespace CameraMovements
                     goalPosition.y = (llBounds.y + urBounds.y) / 2;
                 }
 
-                Vector2 deltaPos = (goalPosition - (Vector2) position) / 4;
+                Vector2 deltaPos = (goalPosition - (Vector2) position) * Time.deltaTime * 4;
 
-                if (deltaPos.magnitude > 2)
+                if (deltaPos.magnitude > 8)
                 {
-                    deltaPos = deltaPos.normalized * 2;
+                    deltaPos = deltaPos.normalized * 8;
                 }
                 position += (Vector3) deltaPos;
 
@@ -65,7 +65,7 @@ namespace CameraMovements
                 transform.position = position;
 
                 Camera currentCamera = GetComponent<Camera>();
-                float newSize = currentCamera.orthographicSize + (scale - currentCamera.orthographicSize) * 0.1f;
+                float newSize = currentCamera.orthographicSize + (scale - currentCamera.orthographicSize) * Time.deltaTime * 8;
                 currentCamera.orthographicSize = newSize;
 
             }

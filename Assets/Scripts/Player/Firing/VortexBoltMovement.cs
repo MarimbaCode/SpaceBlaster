@@ -19,7 +19,13 @@ namespace Player.Firing
         private const int Life = 200;
         private int _life;
     
-    
+        public ParticleSystem particles;
+
+        void DetachParticles()
+        {
+            particles.transform.parent = null;
+            particles.Stop();
+        }
         void Start()
         {
             _life = Life;
@@ -41,18 +47,23 @@ namespace Player.Firing
 
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.tag.Equals("Border"))
             {
+                DetachParticles();
                 Destroy(gameObject);
             }else if (other.gameObject.GetComponent<Life>() != null)
             {
                 String otherSide = other.gameObject.GetComponent<Life>().side;
                 if (!otherSide.Equals(side))
                 {
-                    other.gameObject.GetComponent<Life>().Damage(damage);
-                    Destroy(gameObject);
+                        other.gameObject.GetComponent<Life>().Damage(damage);
+                    if (--pierce <= 0)
+                    {
+                        DetachParticles();
+                        Destroy(gameObject);
+                    }
                 }
             }
         }

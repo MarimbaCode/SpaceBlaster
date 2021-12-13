@@ -17,7 +17,7 @@ namespace Player.Firing
         {
             Init();
 
-            FireSpeed = 4f;
+            FireSpeed = 3f;
 
             bulletPrefab = Resources.Load(PrefabPath + "VortexBolt") as GameObject;
 
@@ -30,9 +30,9 @@ namespace Player.Firing
                 transform.position + (Vector3) AimDirection.normalized * 0.2f, Quaternion.identity);
             VortexBoltMovement movement = projectile.GetComponent<VortexBoltMovement>();
             movement.side = "player";
-            movement.pierce = 2;
+            movement.pierce = 1;
             movement.damage = 4;
-            movement.direction = AimDirection.normalized * 1;
+            movement.direction = AimDirection.normalized * 4;
 
         }
     }

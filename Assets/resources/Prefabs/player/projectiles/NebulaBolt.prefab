@@ -103,7 +103,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.03
 --- !u!50 &7514596180952851799
 Rigidbody2D:
   serializedVersion: 4
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -169,6 +169,7 @@ MonoBehaviour:
   side: Player
   damage: 1
   pierce: 0
+  particles: {fileID: 7551005363962958810}
 --- !u!199 &6021963980024183349
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -190,7 +191,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 107e56db674a0744e9c48d6da4c114f2, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

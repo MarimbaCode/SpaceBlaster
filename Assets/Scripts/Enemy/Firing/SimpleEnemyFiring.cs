@@ -43,7 +43,7 @@ namespace Enemy
         {
             BulletMovement projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(_aim.normalized * 0.5f), Quaternion.identity)
                 .GetComponent<BulletMovement>();
-            projectile.direction = _aim.normalized * 4;
+            projectile.direction = _aim.normalized * 3;
             projectile.side = "ENEMY";
             projectile.damage = 1;
         }

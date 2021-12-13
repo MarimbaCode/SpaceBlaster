@@ -60,19 +60,19 @@ namespace Enemy.Firing
             
             BulletMovement projectile1 = Instantiate(bulletPrefab, transform.position + (Vector3)(_aim.normalized * 0.5f), Quaternion.identity)
                 .GetComponent<BulletMovement>();
-            projectile1.direction = Utils.Rotate(_aim.normalized, Mathf.PI / 12) * 4;
+            projectile1.direction = Utils.Rotate(_aim.normalized, Mathf.PI / 12) * 3;
             projectile1.side = "ENEMY";
             projectile1.damage = 1;
             
             BulletMovement projectile2 = Instantiate(bulletPrefab, transform.position + (Vector3)(_aim.normalized * 0.5f), Quaternion.identity)
                 .GetComponent<BulletMovement>();
-            projectile2.direction = _aim.normalized * 4;
+            projectile2.direction = _aim.normalized * 3;
             projectile2.side = "ENEMY";
             projectile2.damage = 1;
             
             BulletMovement projectile3 = Instantiate(bulletPrefab, transform.position + (Vector3)(_aim.normalized * 0.5f), Quaternion.identity)
                 .GetComponent<BulletMovement>();
-            projectile3.direction = Utils.Rotate(_aim.normalized, Mathf.PI / -12) * 4;
+            projectile3.direction = Utils.Rotate(_aim.normalized, Mathf.PI / -12) * 3;
             projectile3.side = "ENEMY";
             projectile3.damage = 1;
         }
