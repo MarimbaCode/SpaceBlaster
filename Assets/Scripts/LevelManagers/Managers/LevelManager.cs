@@ -30,10 +30,18 @@ namespace LevelManagers.Managers
             Rnd = new System.Random();
 
             player = playerFactory.Create(this);
+
+            player.GetComponent<Energy>().rechargeRate = energyRecharge;
+            player.GetComponent<Energy>().maxEnergy = maxEnergy;
         }
 
         public abstract void GameDeath(String id);
         public abstract void EventTrigger(String id);
+
+        public void SetRespawnPoint(Vector2 respawnPoint)
+        {
+            currentRespawn = respawnPoint;
+        }
 
         public void RespawnPlayer()
         {

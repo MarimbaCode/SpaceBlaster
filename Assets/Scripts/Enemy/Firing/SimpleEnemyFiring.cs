@@ -14,6 +14,8 @@ namespace Enemy
         public int cooldownTime = 32;
         private int _cooldown = 0;
 
+        public int bulletSpeed = 3;
+
         private Vector2 _aim;
 
 
@@ -22,13 +24,15 @@ namespace Enemy
         void FixedUpdate()
         {
             player = GameObject.FindWithTag("Player");
-            Aim();
-            if (_cooldown-- <= 0 && aggro.persuit)
+            if (player != null)
             {
-                _cooldown = cooldownTime;
-                if (_aim.magnitude < 8)
+                Aim();
+                if (_cooldown-- <= 0 && aggro.persuit)
                 {
-                    Fire();
+                    _cooldown = cooldownTime;
+            
+                        Fire();
+                    
                 }
             }
         }
@@ -43,9 +47,10 @@ namespace Enemy
         {
             BulletMovement projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(_aim.normalized * 0.5f), Quaternion.identity)
                 .GetComponent<BulletMovement>();
-            projectile.direction = _aim.normalized * 3;
+            projectile.direction = _aim.normalized * bulletSpeed;
             projectile.side = "ENEMY";
             projectile.damage = 1;
+            projectile.life = 300;
         }
     }
 }

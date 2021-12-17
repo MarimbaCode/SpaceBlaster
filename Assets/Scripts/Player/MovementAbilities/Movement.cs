@@ -7,17 +7,20 @@ namespace Player.MovementAbilities
     {
         public Energy energy;
         public Rigidbody2D rb;
-
+        public Life life;
+        
         public int energyCost;
         public int cooldownTime;
         public int cooldown;
-
+       
         public Camera mainCamera;
 
         public void Awake()
         {
             energy = GetComponentInParent<Energy>();
             rb = GetComponentInParent<Rigidbody2D>();
+            life = GetComponentInParent<Life>();
+            
             mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         }
 

@@ -8,7 +8,7 @@ namespace Enemy
         public bool persuit;
         
         private GameObject _player;
-        private int _aggroTimer;
+        public int aggroTimer;
         public float aggroRange;
         public int aggroTime;
 
@@ -34,7 +34,7 @@ namespace Enemy
             Vector2 direction = playerPosition - position;
 
 
-            RaycastHit2D[] hit = new RaycastHit2D[10];
+            RaycastHit2D[] hit = new RaycastHit2D[20];
             GetComponent<CircleCollider2D>().Raycast(direction.normalized, _filter, hit, aggroRange);
 
             bool foundPlayer = false;
@@ -59,9 +59,9 @@ namespace Enemy
 
             if (foundPlayer)
             {
-                _aggroTimer = aggroTime;
+                aggroTimer = aggroTime;
                 persuit = true;
-            }else if (_aggroTimer-- > 0)
+            }else if (aggroTimer-- > 0)
             {
                 persuit = true;
             }

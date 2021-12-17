@@ -12,7 +12,7 @@ namespace Player.Firing
         {
             Init();
 
-            FireSpeed = 1.8f;
+            FireSpeed = 1f;
 
             bulletPrefab = Resources.Load(PrefabPath + "NebulaBolt") as GameObject;
         }
@@ -22,7 +22,7 @@ namespace Player.Firing
             GameObject projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(AimDirection.normalized * 0.2f), Quaternion.identity);
             NebulaBoltMovement movement = projectile.GetComponent<NebulaBoltMovement>();
             movement.side = "player";
-            movement.pierce = 2;
+            movement.pierce = 4;
             movement.damage = 1;
             movement.direction = AimDirection.normalized * 4;
         }

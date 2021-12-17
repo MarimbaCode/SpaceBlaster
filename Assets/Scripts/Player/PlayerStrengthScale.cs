@@ -5,6 +5,6 @@ namespace Player
 {
     public class PlayerStrengthScale : MonoBehaviour
     {
-        public float multiplier;
+        public float multiplier = 1;
     }
 }

@@ -31,7 +31,7 @@ namespace Player.Firing
             VortexBoltMovement movement = projectile.GetComponent<VortexBoltMovement>();
             movement.side = "player";
             movement.pierce = 1;
-            movement.damage = 4;
+            movement.damage = 5;
             movement.direction = AimDirection.normalized * 4;
 
         }

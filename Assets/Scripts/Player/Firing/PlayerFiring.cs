@@ -25,6 +25,7 @@ namespace Player.Firing
 
         void FixedUpdate()
         {
+            Strength = 1f/GetComponent<PlayerStrengthScale>().multiplier;
             FireRate = (int)(Cooldown * FireSpeed * Strength);
             Aim();
             if ((_cooldown-- <= 0 && Input.GetMouseButton(0)))

@@ -16,7 +16,7 @@ namespace Player
 
         public GameObject Create(LevelManager manager)
         {
-            GameObject newPlayer = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            GameObject newPlayer = Instantiate(playerPrefab, manager.currentRespawn, Quaternion.identity);
             
             
             GetPlayerFiring(newPlayer);

@@ -15,6 +15,7 @@ public class Boss1Firing : MonoBehaviour
     private int state;
     private int stateTemp;
     private int cooldown;
+    private Vector2 vectorTemp;
     private void FixedUpdate()
     {
         player = GameObject.FindWithTag("Player");
@@ -25,20 +26,20 @@ public class Boss1Firing : MonoBehaviour
             {
                 
                 case 0:
-
-                    for (float theta = 0; theta < 2 * Mathf.PI; theta += (Mathf.PI / 8))
+            
+                    for (float theta = 0; theta < 2 * Mathf.PI; theta += (Mathf.PI /32))
                     {
-                        shoot(Utils.Rotate(Vector2.right, theta), 3);
+                        shoot(Utils.Rotate(Vector2.right, theta), 2);
                     }
-
+            
                     cooldown = 48;
                     state++;
                     break;
                 case 1:
-
+            
                     if (stateTemp++ < 16)
                     {
-                        shoot(8);
+                        shoot(4);
                         cooldown = 6;
                     }
                     else
@@ -48,15 +49,17 @@ public class Boss1Firing : MonoBehaviour
                     }
                     break;
                 case 2:
-                    
-                    if (stateTemp++ < 28)
+                    if (stateTemp <= 5)
                     {
-                        shoot(16, Mathf.PI/8);
-                        shoot(16, -Mathf.PI/8);
+                        vectorTemp = ((Vector2) (player.transform.position - transform.position)).normalized;
+                    }
+            
+                    if (stateTemp++ < 60)
+                    {
+                        shoot(Utils.Rotate(vectorTemp, Mathf.PI/4), 12);
+                        shoot(Utils.Rotate(vectorTemp, -Mathf.PI/4), 12);
                         
-                        shoot(6, Mathf.PI/8);
-                        shoot(6, -Mathf.PI/8);
-                        cooldown = 2;
+                        cooldown = 1;
                     }
                     else
                     {
@@ -70,8 +73,10 @@ public class Boss1Firing : MonoBehaviour
                 default:
                     state = 0;
                     break;
-
+            
             }
+            
+            
             
             
             

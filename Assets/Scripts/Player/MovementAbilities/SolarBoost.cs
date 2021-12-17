@@ -44,34 +44,13 @@ namespace Player.MovementAbilities
             {
                 direction = Vector2.right;
             }
-            
+
             direction.Normalize();
-            
-            /*
-            Vector2 mousePosition = ((Vector2) (mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position));
-            
-            float mouseTheta = Mathf.Atan2(mousePosition.y, mousePosition.x);
-            float directionTheta = Mathf.Atan2(direction.y,  direction.x);
-
-            float moveAngle;
-            
-            if (directionTheta - mouseTheta > 0 && directionTheta - mouseTheta < Mathf.PI)
-            {
-                moveAngle = Mathf.PI / 2;
-            }
-            else
-            {
-                moveAngle = -Mathf.PI / 2;
-            }
-
-            Vector2 moveDirection = Utils.Rotate(mousePosition.normalized, moveAngle);
-            
-            rb.AddForce(moveDirection * 40, ForceMode2D.Impulse);
-            */
             
             particleSystem.Play();
             rb.AddForce(direction * 18f, ForceMode2D.Impulse);
-
+            
+            life.AddInvincibility(50);
         }
 
     }

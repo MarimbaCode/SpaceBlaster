@@ -9,6 +9,8 @@ namespace LevelManagers.Managers
     {
 
         public GameObject door1;
+        public GameObject door2;
+
         
         private List<GameObject> _enemies;
 
@@ -36,6 +38,7 @@ namespace LevelManagers.Managers
                 Destroy(door1);
             }
             
+            
             switch (_state)
             {
                 
@@ -58,7 +61,8 @@ namespace LevelManagers.Managers
                 case"A":
                     enemyADeaths++;
                     break;
-                case"boss":
+                case"SEC-1":
+                    Destroy(door2);
                     break;
             }
         }
