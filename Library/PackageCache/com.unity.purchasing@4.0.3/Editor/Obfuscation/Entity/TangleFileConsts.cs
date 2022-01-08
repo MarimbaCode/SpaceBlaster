@@ -1,13 +1,3 @@
-namespace UnityEditor.Purchasing
-{
-    internal class TangleFileConsts
-    {
-        internal const string k_OutputPath = "Assets/Scripts/UnityPurchasing/generated";
-        internal const string k_PrevOutputPath = "Assets/Plugins/UnityPurchasing/generated";
-        internal const string k_BadOutputPath = "Assets/Resources/UnityPurchasing/generated";
-
-        internal const string k_AppleClassPrefix = "Apple";
-        internal const string k_GooglePlayClassPrefix = "GooglePlay";
-        internal const string k_ObfuscationClassSuffix = "Tangle.cs";
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8762bc1fd26d2f26b863dca34dbc087b04b764a8756ef3c7cb72cb4466cdf4fb
+size 562

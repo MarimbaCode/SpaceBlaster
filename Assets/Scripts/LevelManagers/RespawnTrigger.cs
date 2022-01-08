@@ -1,21 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using LevelManagers.Managers;
-using UnityEngine;
-
-public class RespawnTrigger : MonoBehaviour
-{
-    public LevelManager levelManager;
-    public Transform spawnPosition;
-    void Start()
-    {
-        levelManager = GameObject.FindWithTag("GameController").GetComponent<LevelManager>();
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        levelManager.SetRespawnPoint(spawnPosition.position);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:74b54d91f03f931902a71cac1bc888f5075feebf6b52af8a0fbe62b95a917ca7
+size 503

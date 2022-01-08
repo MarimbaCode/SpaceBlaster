@@ -1,12 +1,3 @@
-#import <UnityAds/UMONShowAdPlacementContent.h>
-#import <UnityAds/UMONPromoMetaData.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UMONPromoAdPlacementContent : UMONShowAdPlacementContent
-- (instancetype)initWithPlacementId: (NSString *)placementId withParams: (NSDictionary *)params;
-
-@property (nonatomic, strong, readonly) UMONPromoMetaData *metadata;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:56d18cd5bae3e65e1ed6f245d8747f0dfe9d0e7139b54810a42edb3fc2011c3d
+size 376

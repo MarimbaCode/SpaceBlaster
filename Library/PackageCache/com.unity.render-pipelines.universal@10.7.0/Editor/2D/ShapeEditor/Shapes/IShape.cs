@@ -1,19 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityEditor.Experimental.Rendering.Universal.Path2D
-{
-    internal enum ShapeType
-    {
-        Polygon,
-        Spline
-    }
-
-    internal interface IShape
-    {
-        ShapeType type { get; }
-        bool isOpenEnded { get; }
-        ControlPoint[] ToControlPoints();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41c40799edfd26b57ffaf487b76ba90f347ba097b604ece11c20702e0261dc38
+size 369

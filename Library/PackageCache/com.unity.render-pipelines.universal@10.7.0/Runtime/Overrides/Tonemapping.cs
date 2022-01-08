@@ -1,25 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering.Universal
-{
-    public enum TonemappingMode
-    {
-        None,
-        Neutral, // Neutral tonemapper
-        ACES,    // ACES Filmic reference tonemapper (custom approximation)
-    }
-
-    [Serializable, VolumeComponentMenu("Post-processing/Tonemapping")]
-    public sealed class Tonemapping : VolumeComponent, IPostProcessComponent
-    {
-        [Tooltip("Select a tonemapping algorithm to use for the color grading process.")]
-        public TonemappingModeParameter mode = new TonemappingModeParameter(TonemappingMode.None);
-
-        public bool IsActive() => mode.value != TonemappingMode.None;
-
-        public bool IsTileCompatible() => true;
-    }
-
-    [Serializable]
-    public sealed class TonemappingModeParameter : VolumeParameter<TonemappingMode> { public TonemappingModeParameter(TonemappingMode value, bool overrideState = false) : base(value, overrideState) { } }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38bc5f83c181f22172b63722a8fb1c4ee75725956d5ec7288406c40a019509b8
+size 928

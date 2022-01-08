@@ -1,14 +1,3 @@
-﻿namespace UnityEditor.ShaderGraph
-{
-    [GenerationAPI]
-    internal struct KeywordDescriptor
-    {
-        public string displayName;
-        public string referenceName;
-        public KeywordType type;
-        public KeywordDefinition definition;
-        public KeywordScope scope;
-        public int value;
-        public KeywordEntry[] entries;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23c5f63512bbcb1a63a2c7174b38d73cd928343a2f90671e2df70eac949ce860
+size 361

@@ -1,31 +1,3 @@
-#import <UnityAds/UANAApiAnalytics.h>
-#import "UnityAdsUtilities.h"
-
-typedef void (*UANAEngineTriggerAddExtras)(const char *payload);
-
-static UANAEngineTriggerAddExtras triggerAddExtras = NULL;
-
-void UANAEngineDelegateSetTriggerAddExtras(UANAEngineTriggerAddExtras trigger) {
-    triggerAddExtras = trigger;
-}
-
-@interface UANAEngineWrapper : NSObject <UANAEngineDelegate>
-@end
-
-@implementation UANAEngineWrapper
-- (void)addExtras:(NSString *)extras {
-    if (triggerAddExtras) {
-        const char * rawExtrasString = UnityAdsCopyString([extras UTF8String]);
-        triggerAddExtras(rawExtrasString);
-        free((void *)rawExtrasString);
-    }
-}
-@end
-
-void InitializeUANAEngineWrapper() {
-    static id<UANAEngineDelegate> delegate = nil;
-    if (delegate == nil) {
-        delegate = [[UANAEngineWrapper alloc] init];
-        [UANAApiAnalytics setAnalyticsDelegate:delegate];
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a296f9c476c0394eec46f74641999463a1bd3cd8df053cab4ba891227efd23e6
+size 888

@@ -1,16 +1,3 @@
-{
-    "name": "UnityEngine.Monetization",
-    "references": [
-        "UnityEngine.Advertisements"
-    ],
-    "optionalUnityReferences": [],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [
-        "!ADS_ASSET_STORE_PACKAGE_DETECTED"
-    ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2c3248830db7ab815ab42d7b63d2b806a64d97b7c3ae639bddb2e2b69d1beb1
+size 399

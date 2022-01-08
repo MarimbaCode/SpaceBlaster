@@ -1,26 +1,3 @@
-using UnityEditor.Graphing;
-using UnityEditor.ShaderGraph.Drawing;
-
-namespace UnityEditor.ShaderGraph
-{
-    static class IndexSetPool
-    {
-        // Object pool to avoid allocations.
-        static readonly ObjectPool<IndexSet> s_IndexSetPool = new ObjectPool<IndexSet>(null, l => l.Clear());
-
-        public static IndexSet Get()
-        {
-            return s_IndexSetPool.Get();
-        }
-
-        public static PooledObject<IndexSet> GetDisposable()
-        {
-            return s_IndexSetPool.GetDisposable();
-        }
-
-        public static void Release(IndexSet toRelease)
-        {
-            s_IndexSetPool.Release(toRelease);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d03833f869550b665751875e3544734eec419b99053f8ad533bc21bcbf4b841
+size 658

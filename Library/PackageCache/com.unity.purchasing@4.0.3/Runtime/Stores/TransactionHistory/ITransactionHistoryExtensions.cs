@@ -1,24 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine.Purchasing.Extension;
-
-namespace UnityEngine.Purchasing
-{
-    /// <summary>
-    /// IAP transaction history and debugging extension.
-    /// </summary>
-    public interface ITransactionHistoryExtensions : IStoreExtension
-    {
-        /// <summary>
-        /// Get the description of the last received purchase failure.
-        /// </summary>
-        /// <returns> The <c>PurchaseFailureDescription</c> associated with the last failed purchase. </returns>
-        PurchaseFailureDescription GetLastPurchaseFailureDescription();
-
-        /// <summary>
-        /// Gets the store-specfic error code of the last received purchase failure.
-        /// </summary>
-        /// <returns> The <c>StoreSpecificPurchaseErrorCode</c> associated with the last failed purchase. </returns>
-        StoreSpecificPurchaseErrorCode GetLastStoreSpecificPurchaseErrorCode();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eee10edd56c962fb8300faa2afbb5be719afa055fac1429b9de02cc565acacd7
+size 933

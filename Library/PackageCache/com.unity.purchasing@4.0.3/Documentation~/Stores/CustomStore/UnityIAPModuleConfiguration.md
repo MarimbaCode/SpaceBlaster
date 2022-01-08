@@ -1,12 +1,3 @@
-Store Configuration
-===================
-
-Your store may require developers to supply additional configuration information during initialization, for which your module can register a configuration instance that implements the ``IStoreConfiguration`` interface:
-
-````
-var config = new MyConfiguration(); // Implements IStoreConfiguration
-BindConfiguration<MyConfiguration>(new MyConfiguration());
-````
-
-When developers request an instance of your configuration type, Unity IAP first tries to cast your store implementation to the configuration type. Only if that cast fails will any instance bound via ``BindConfiguration`` will be used.
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5b62cbcd76d1990b378413e2246f5e21826ade9d29fbf48be9bab5dab998cef
+size 637

@@ -1,18 +1,3 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using UnityEngine.UIElements;
-
-namespace Unity.VectorGraphics
-{
-    internal static partial class InternalBridge
-    {
-        // Sprite.Create(Rect, Vector2, float, Texture2D) is internal
-        internal static Sprite CreateSprite(Rect rect, Vector2 pivot, float svgPixelsPerUnit, Texture2D texture)
-        {
-            return Sprite.Create(rect, pivot, svgPixelsPerUnit, texture);
-        }
-   }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72e8ee957639eb78d63a97e890410a90c84bc986c45487c55df92da21264e7f5
+size 517

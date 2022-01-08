@@ -1,19 +1,3 @@
-#import <UnityAds/UPURTransactionDetails.h>
-#import <UnityAds/UPURTransactionErrorDetails.h>
-#import <UnityAds/UMONCustomEvent.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UPURTransactionDetails (UnityJsonAdditions)
-+(nullable instancetype)buildWithJson:(NSString *)json error:(NSError **)error;
-@end
-
-@interface UPURTransactionErrorDetails (UnityJsonAdditions)
-+(nullable instancetype)buildWithJson:(NSString *)json error:(NSError **)error; 
-@end
-
-@interface UMONCustomEvent (UnityJsonAdditions)
-+(nullable instancetype)buildWithJson:(NSString *)json error: (NSError **)error;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:22b1b141a04942f05d249b7a003bcaaf549e5adabdf4e3dead25da14afcc0feb
+size 601

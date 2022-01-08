@@ -1,30 +1,3 @@
-
-#import <UnityAds/UPURTransactionError.h>
-#import <UnityAds/UPURStore.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UPURTransactionErrorDetailsBuilder : NSObject
-@property (nonatomic) UPURTransactionError transactionError;
-@property (strong, nonatomic) NSString *exceptionMessage;
-@property (nonatomic) UPURStore store;
-@property (strong, nonatomic) NSString *storeSpecificErrorCode;
-@property (strong, nonatomic) NSMutableDictionary *extras;
-
-- (void)putExtra: (NSString *)key value: (NSObject *)value;
-
-@end
-
-@interface UPURTransactionErrorDetails : NSObject
-
-@property (nonatomic, readonly) UPURTransactionError transactionError;
-@property (strong, nonatomic, readonly) NSString *exceptionMessage;
-@property (nonatomic, readonly) UPURStore store;
-@property (strong, nonatomic, readonly) NSString *storeSpecificErrorCode;
-@property (strong, nonatomic, readonly) NSDictionary *extras;
-
-+ (instancetype)build: (void (^)(UPURTransactionErrorDetailsBuilder *))buildBlock;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:febc4fc10f950866bfbe790a06ca9f9d8cf7a29dfb4c9758f232017fcda6f677
+size 994

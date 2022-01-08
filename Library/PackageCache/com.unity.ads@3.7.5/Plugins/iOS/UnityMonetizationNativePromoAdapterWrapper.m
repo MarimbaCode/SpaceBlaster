@@ -1,36 +1,3 @@
-﻿#import <UnityAds/UnityMonetization.h>
-#import "UnityJsonAdditions.h"
-
-const void* UnityMonetizationCreateNativePromoAdapter(const void* pPlacementContent) {
-    if (pPlacementContent) {
-        UMONPromoAdPlacementContent* placementContent = (__bridge UMONPromoAdPlacementContent*)pPlacementContent;
-        UMONNativePromoAdapter* adapter = [[UMONNativePromoAdapter alloc] initWithPromo:placementContent];
-        return CFBridgingRetain(adapter);
-    }
-    return NULL;
-}
-
-void UnityMonetizationReleaseNativePromoAdapter(const void* pPlacementContent) {
-    CFBridgingRelease(pPlacementContent);
-}
-
-void UnityMonetizationNativePromoAdapterOnShown(const void* pNativePromoAdapter, int showType) {
-    if (pNativePromoAdapter) {
-        UMONNativePromoAdapter* adapter = (__bridge UMONNativePromoAdapter*)pNativePromoAdapter;
-        [adapter promoDidShow:(UMONNativePromoShowType)showType];
-    }
-}
-
-void UnityMonetizationNativePromoAdapterOnClicked(const void* pNativePromoAdapter) {
-    if (pNativePromoAdapter) {
-        UMONNativePromoAdapter* adapter = (__bridge UMONNativePromoAdapter*)pNativePromoAdapter;
-        [adapter promoDidClick];
-    }
-}
-
-void UnityMonetizationNativePromoAdapterOnClosed(const void* pNativePromoAdapter) {
-    if (pNativePromoAdapter) {
-        UMONNativePromoAdapter* adapter = (__bridge UMONNativePromoAdapter*)pNativePromoAdapter;
-        [adapter promoDidClose];
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c65b7f82ec422d62e3e53ce1597a0d78ff1e1b3f16c3db0d4d7b61c4c977ac1c
+size 1413

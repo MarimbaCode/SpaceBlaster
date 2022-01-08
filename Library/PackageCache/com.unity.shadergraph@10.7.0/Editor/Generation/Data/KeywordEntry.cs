@@ -1,27 +1,3 @@
-﻿using System;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Serializable][GenerationAPI]
-    internal struct KeywordEntry
-    {
-        public int id; // Used to determine what MaterialSlot an entry belongs to
-        public string displayName;
-        public string referenceName;
-
-        // In this case, we will handle the actual IDs later
-        public KeywordEntry(string displayName, string referenceName)
-        {
-            this.id = -1;
-            this.displayName = displayName;
-            this.referenceName = referenceName;
-        }
-
-        internal KeywordEntry(int id, string displayName, string referenceName)
-        {
-            this.id = id;
-            this.displayName = displayName;
-            this.referenceName = referenceName;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26d372c8578fe930c0163cbecbc9a0b60162a37dc7c31b0bdfde11c44f9ec505
+size 778

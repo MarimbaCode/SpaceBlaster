@@ -1,18 +1,3 @@
-#if !defined(NORMALS_RENDERING_PASS)
-#define NORMALS_RENDERING_PASS
-
-half4 NormalsRenderingShared(half4 color, half3 normalTS, half3 tangent, half3 bitangent, half3 normal)
-{
-    half4 normalColor;
-    half3 normalWS = TransformTangentToWorld(normalTS, half3x3(tangent.xyz, bitangent.xyz, normal.xyz));
-    half3 normalVS = TransformWorldToViewDir(normalWS);
-
-    
-    normalColor.rgb = 0.5 * ((normalVS)+1);
-    normalColor.a = color.a;  // used for blending
-
-    return normalColor;
-}
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5f921642a2dc68d7d6fd4b4eb0750df9bb9ca450895a64506d156ef950ec135
+size 496

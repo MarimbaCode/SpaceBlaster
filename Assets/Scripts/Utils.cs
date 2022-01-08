@@ -1,14 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Utils : MonoBehaviour
-{
-    public static Vector2 Rotate(Vector2 vector2, float angle)
-    {
-        return new Vector2(
-            vector2.x * Mathf.Cos(angle) - vector2.y * Mathf.Sin(angle),
-            vector2.x * Mathf.Sin(angle) + vector2.y * Mathf.Cos(angle)
-        );
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24aa6382774c00ff3d0b839bd20dc4173adf6a3b098d5b7b1ec1b4d733da73dc
+size 1025

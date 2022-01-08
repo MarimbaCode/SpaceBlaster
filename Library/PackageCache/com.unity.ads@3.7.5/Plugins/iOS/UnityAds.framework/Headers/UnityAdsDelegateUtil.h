@@ -1,15 +1,3 @@
-#import <Foundation/Foundation.h>
-#import <UnityAds/UnityAdsDelegate.h>
-#import <UnityAds/UnityAdsPlacementState.h>
-
-@interface UnityAdsDelegateUtil : NSObject
-
-+ (void)unityAdsReady: (NSString *)placementId;
-+ (void)unityAdsDidError: (UnityAdsError)error withMessage: (NSString *)message;
-+ (void)unityAdsDidStart: (NSString *)placementId;
-+ (void)unityAdsDidFinish: (NSString *)placementId
-          withFinishState: (UnityAdsFinishState)state;
-+ (void)unityAdsDoClick: (NSString *)placementId;
-+ (void)unityAdsPlacementStateChange: (NSString *)placementId oldState: (UnityAdsPlacementState)oldState newState: (UnityAdsPlacementState)newState;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:be5e186755fbc236d561e29ec7ac5f8ee4bf8f4ae49f06e6fe944e7b63f39a6b
+size 652

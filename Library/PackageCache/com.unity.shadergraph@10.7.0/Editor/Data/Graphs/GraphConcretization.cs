@@ -1,27 +1,3 @@
-using System.Linq;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    sealed partial class GraphData : ISerializationCallbackReceiver
-    {
-        public static class GraphConcretization
-        {
-            public static void ConcretizeNode(AbstractMaterialNode node)
-            {
-                node.Concretize();
-            }
-            public static void ConcretizeProperties(GraphData graph)
-            {
-                var propertyNodes = graph.GetNodes<PropertyNode>().Where(n => !graph.m_Properties.Any(p => p == n.property)).ToArray();
-                foreach (var pNode in propertyNodes)
-                    graph.ReplacePropertyNodeWithConcreteNodeNoValidate(pNode);
-            }
-            public static void ConcretizeGraph(GraphData graph)
-            {
-                ConcretizeProperties(graph);
-                GraphDataUtils.ApplyActionLeafFirst(graph, ConcretizeNode);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a29b9b174a8c6accfef61bacc41143e0374e5057e073f3f7d31fac0487509489
+size 940

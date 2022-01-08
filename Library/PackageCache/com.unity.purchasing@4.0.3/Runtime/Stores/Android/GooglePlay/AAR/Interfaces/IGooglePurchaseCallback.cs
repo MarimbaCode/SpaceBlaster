@@ -1,14 +1,3 @@
-using UnityEngine.Purchasing.Extension;
-
-namespace UnityEngine.Purchasing.Interfaces
-{
-    interface IGooglePurchaseCallback
-    {
-        void SetStoreCallback(IStoreCallback storeCallback);
-        void SetStoreConfiguration(IGooglePlayConfigurationInternal configuration);
-        void OnPurchaseSuccessful(string sku, string receipt, string purchaseToken);
-        void OnPurchaseFailed(PurchaseFailureDescription purchaseFailureDescription);
-        void NotifyDeferredPurchase(string sku, string receipt, string purchaseToken);
-        void NotifyDeferredProrationUpgradeDowngradeSubscription(string sku);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:56dd3ad639e7f2cf23a2aecc1e5b712d1f56f47ae825db334f35e02e4a2876f9
+size 620

@@ -1,26 +1,3 @@
-#import <UnityAds/UnityAdsLoadError.h>
-NS_ASSUME_NONNULL_BEGIN
-
-/**
- *  The `UnityAdsLoadDelegate` protocol defines the required methods for receiving messages from UnityAds.load() method.
- */
-@protocol UnityAdsLoadDelegate <NSObject>
-/**
- *  Callback triggered when a load request has successfully filled the specified placementId with an ad that is ready to show.
- *
- *  @param placementId The ID of the placement as defined in Unity Ads admin tools.
- */
-- (void)unityAdsAdLoaded: (NSString *)placementId;
-
-/**
- * Called when load request has failed to load an ad for a requested placement.
- * @param placementId The ID of the placement as defined in Unity Ads admin tools.
- * @param error UnityAdsLoadError
- * @param message A human readable error message
- */
-- (void)unityAdsAdFailedToLoad: (NSString *)placementId
-                     withError: (UnityAdsLoadError)error
-                   withMessage: (NSString *)message;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:452f75c25cfb9fb2c518e9f3a9de6f1759fd6c0ec3a3ed9f238ed3899b348c49
+size 957

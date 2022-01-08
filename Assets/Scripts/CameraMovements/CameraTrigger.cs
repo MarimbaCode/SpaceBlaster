@@ -1,29 +1,3 @@
-﻿using UnityEngine;
-
-namespace CameraMovements
-{
-    public class CameraTrigger : MonoBehaviour
-    {
-        private GameObject _mainCamera;
-
-        public Transform lowerLeftBounds, upperRightBounds;
-        public float scale = 5;
-
-        private void Start()
-        {
-            _mainCamera = GameObject.FindWithTag("MainCamera");
-        }
-
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.Equals(GameObject.FindWithTag("Player").GetComponent<BoxCollider2D>()))
-            {
-                Debug.Log("CAMERA MOVE");
-                CameraMovement movement = _mainCamera.GetComponent<CameraMovement>();
-                movement.llBounds = lowerLeftBounds.position;
-                movement.urBounds = upperRightBounds.position;
-                movement.scale = scale;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3db782ea16b331d3bc5aaa14ec0654f95e2ef8e4af7f14d020e6c098860e2ab8
+size 929

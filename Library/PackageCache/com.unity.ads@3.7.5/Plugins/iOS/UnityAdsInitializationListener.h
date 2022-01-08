@@ -1,10 +1,3 @@
-#import "UnityAds/UnityAds.h"
-
-typedef void (*InitSuccessCallback)(void *initListener);
-typedef void (*InitFailCallback)(void *initListener, int error, const char *message);
-
-@interface UnityAdsInitializationListener : NSObject <UnityAdsInitializationDelegate>
-@property (assign) InitSuccessCallback initSuccessCallback;
-@property (assign) InitFailCallback initFailCallback;
-- (id)initWithSuccessCallback:(InitSuccessCallback)initSuccessCallback failCallback:(InitFailCallback)initFailCallback;
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:78cea69ca41483eeadc1050f79552ddc87874f64283fb7aadeecf0aad5a60871
+size 500

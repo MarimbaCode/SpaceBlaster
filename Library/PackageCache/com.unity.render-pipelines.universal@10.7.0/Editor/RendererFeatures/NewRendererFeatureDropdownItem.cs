@@ -1,16 +1,3 @@
-using UnityEditor.Rendering.Universal.Internal;
-
-namespace UnityEditor.Rendering.Universal
-{
-    internal static class NewRendererFeatureDropdownItem
-    {
-        static readonly string defaultNewClassName = "CustomRenderPassFeature.cs";
-
-        [MenuItem("Assets/Create/Rendering/Universal Render Pipeline/Renderer Feature", priority = EditorUtils.lwrpAssetCreateMenuPriorityGroup2)]
-        internal static void CreateNewRendererFeature()
-        {
-            string templatePath = AssetDatabase.GUIDToAssetPath(ResourceGuid.rendererTemplate);
-            ProjectWindowUtil.CreateScriptAssetFromTemplateFile(templatePath, defaultNewClassName);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af9ab39d95a337c5ad284fbc0411dc8ccd2b804c90e05be906f4992e24e39227
+size 667

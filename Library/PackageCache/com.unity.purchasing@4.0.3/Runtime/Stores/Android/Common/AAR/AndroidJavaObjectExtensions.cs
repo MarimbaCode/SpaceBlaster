@@ -1,14 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
-namespace UnityEngine.Purchasing.Models
-{
-    static class AndroidJavaObjectExtensions
-    {
-        internal static IEnumerable<T> Enumerate<T>(this AndroidJavaObject androidJavaList)
-        {
-            var size = androidJavaList?.Call<int>("size") ?? 0;
-            return Enumerable.Range(0, size).Select(i => androidJavaList.Call<T>("get", i));
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3771954271bde112be551f9bb53dec1d44035b6d1af31fe05fe1571394f0f996
+size 424

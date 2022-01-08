@@ -1,30 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace UnityEditor.Experimental.Rendering.Universal.Path2D.GUIFramework
-{
-    internal abstract class HoveredControlAction : GUIAction
-    {
-        private Control m_HoveredControl;
-
-        public Control hoveredControl
-        {
-            get { return m_HoveredControl; }
-        }
-
-        public HoveredControlAction(Control control)
-        {
-            m_HoveredControl = control;
-        }
-
-        protected override bool CanTrigger(IGUIState guiState)
-        {
-            return guiState.nearestControl == hoveredControl.ID;
-        }
-
-        protected override void OnTrigger(IGUIState guiState)
-        {
-            m_HoveredControl.SetActionID(ID);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f28ac0d4a31a5b36008b612d84672eab7fed3858ba23080d8f7a93de5a00f7b5
+size 724

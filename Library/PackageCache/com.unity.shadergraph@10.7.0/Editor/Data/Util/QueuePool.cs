@@ -1,25 +1,3 @@
-using System.Collections.Generic;
-
-namespace UnityEditor.Graphing
-{
-    static class QueuePool<T>
-    {
-        // Object pool to avoid allocations.
-        static readonly ObjectPool<Queue<T>> k_QueuePool = new ObjectPool<Queue<T>>(null, l => l.Clear());
-
-        public static Queue<T> Get()
-        {
-            return k_QueuePool.Get();
-        }
-
-        public static PooledObject<Queue<T>> GetDisposable()
-        {
-            return k_QueuePool.GetDisposable();
-        }
-
-        public static void Release(Queue<T> toRelease)
-        {
-            k_QueuePool.Release(toRelease);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:37c318813b7dc88d3cb6ed730f34369689d281cd645af50a3ceb8d5048d0243c
+size 610

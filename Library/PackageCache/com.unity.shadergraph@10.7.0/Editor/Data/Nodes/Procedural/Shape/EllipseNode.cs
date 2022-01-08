@@ -1,34 +1,3 @@
-using System.Reflection;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Procedural", "Shape", "Ellipse")]
-    class EllipseNode : CodeFunctionNode
-    {
-        public EllipseNode()
-        {
-            name = "Ellipse";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Ellipse", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Ellipse(
-            [Slot(0, Binding.MeshUV0)] Vector2 UV,
-            [Slot(2, Binding.None, 0.5f, 0, 0, 0)] Vector1 Width,
-            [Slot(3, Binding.None, 0.5f, 0, 0, 0)] Vector1 Height,
-            [Slot(4, Binding.None, ShaderStageCapability.Fragment)] out Vector1 Out)
-        {
-            return
-                @"
-{
-    $precision d = length((UV * 2 - 1) / $precision2(Width, Height));
-    Out = saturate((1 - d) / fwidth(d));
-}";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0213ee3e0697e1e21ca1620d944929530f8d76c90d89e8aa5158211ac73b2aa0
+size 929

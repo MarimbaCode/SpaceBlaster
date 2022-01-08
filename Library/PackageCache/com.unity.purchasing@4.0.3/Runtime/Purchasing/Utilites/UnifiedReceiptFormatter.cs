@@ -1,16 +1,3 @@
-namespace UnityEngine.Purchasing
-{
-    internal static class UnifiedReceiptFormatter
-    {
-        internal static string FormatUnifiedReceipt(string platformReceipt, string transactionId, string storeName)
-        {
-            UnifiedReceipt unifiedReceipt = new UnifiedReceipt()
-            {
-                Store = storeName,
-                TransactionID = transactionId,
-                Payload = platformReceipt
-            };
-            return JsonUtility.ToJson(unifiedReceipt);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:452fa32da226cc07fca79ec7ac851947b05e38adf8f872170afa4e8fff703b0b
+size 508

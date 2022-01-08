@@ -1,25 +1,3 @@
-using System.Collections.Generic;
-
-namespace UnityEditor.Graphing
-{
-    static class StackPool<T>
-    {
-        // Object pool to avoid allocations.
-        static readonly ObjectPool<Stack<T>> k_StackPool = new ObjectPool<Stack<T>>(null, l => l.Clear());
-
-        public static Stack<T> Get()
-        {
-            return k_StackPool.Get();
-        }
-
-        public static PooledObject<Stack<T>> GetDisposable()
-        {
-            return k_StackPool.GetDisposable();
-        }
-
-        public static void Release(Stack<T> toRelease)
-        {
-            k_StackPool.Release(toRelease);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2309f289cbd85afe7ca5dbc83ef759384d7c8aca6ea5508da00ef13db442d1f3
+size 610

@@ -1,29 +1,3 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEditor;
-
-#if ENABLE_VR || ENABLE_AR
-using UnityEngine.XR;
-
-namespace UnityEditor.XR.LegacyInputHelpers
-{
-    [CustomEditor(typeof(CameraOffset))]
-    class CameraOffsetHelperEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            GUI.enabled = false;
-            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((CameraOffset)target), typeof(CameraOffset), false);
-            GUI.enabled = true;
-
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_CameraFloorOffsetObject"));
-
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_RequestedTrackingMode"));
-
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_CameraYOffset"));
-
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b4c0759c8f72993f25f35a4eb5c6e1da556f446df14ad36744658a3a6c972d8
+size 889

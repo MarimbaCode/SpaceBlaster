@@ -1,32 +1,3 @@
-using System;
-using UnityEditor.Graphing;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Serializable]
-    class GradientMaterialSlot : MaterialSlot
-    {
-        public GradientMaterialSlot()
-        {}
-
-        public GradientMaterialSlot(
-            int slotId,
-            string displayName,
-            string shaderOutputName,
-            SlotType slotType,
-            ShaderStageCapability stageCapability = ShaderStageCapability.All,
-            bool hidden = false)
-            : base(slotId, displayName, shaderOutputName, slotType, stageCapability, hidden)
-        {}
-
-        public override SlotValueType valueType { get { return SlotValueType.Gradient; } }
-        public override ConcreteSlotValueType concreteValueType { get { return ConcreteSlotValueType.Gradient; } }
-        public override bool isDefaultValue => true;
-
-        public override void AddDefaultProperty(PropertyCollector properties, GenerationMode generationMode)
-        {}
-
-        public override void CopyValuesFrom(MaterialSlot foundSlot)
-        {}
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:17f13447e9180fd39b6017e259a07bf051ff7f9c96dff3063ddb2dd4d00edccb
+size 1046

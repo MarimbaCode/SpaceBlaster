@@ -1,27 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering.Universal
-{
-    [Serializable, VolumeComponentMenu("Post-processing/Vignette")]
-    public sealed class Vignette : VolumeComponent, IPostProcessComponent
-    {
-        [Tooltip("Vignette color.")]
-        public ColorParameter color = new ColorParameter(Color.black, false, false, true);
-
-        [Tooltip("Sets the vignette center point (screen center is [0.5,0.5]).")]
-        public Vector2Parameter center = new Vector2Parameter(new Vector2(0.5f, 0.5f));
-
-        [Tooltip("Amount of vignetting on screen.")]
-        public ClampedFloatParameter intensity = new ClampedFloatParameter(0f, 0f, 1f);
-
-        [Tooltip("Smoothness of the vignette borders.")]
-        public ClampedFloatParameter smoothness = new ClampedFloatParameter(0.2f, 0.01f, 1f);
-
-        [Tooltip("Should the vignette be perfectly round or be dependent on the current aspect ratio?")]
-        public BoolParameter rounded = new BoolParameter(false);
-
-        public bool IsActive() => intensity.value > 0f;
-
-        public bool IsTileCompatible() => true;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c41cace5cfa7799685d10ccca5ff4e927b220759597ab3e5741d98845ef45d8e
+size 1085

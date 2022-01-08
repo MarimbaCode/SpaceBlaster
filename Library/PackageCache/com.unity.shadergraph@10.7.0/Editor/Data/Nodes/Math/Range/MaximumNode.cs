@@ -1,32 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Range", "Maximum")]
-    class MaximumNode : CodeFunctionNode
-    {
-        public MaximumNode()
-        {
-            name = "Maximum";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Maximum", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Maximum(
-            [Slot(0, Binding.None)] DynamicDimensionVector A,
-            [Slot(1, Binding.None)] DynamicDimensionVector B,
-            [Slot(2, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = max(A, B);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb6eb9cbe3e2c18996afca6feb5de3e72a3975b4335c651c47bfbd5ac56c6296
+size 738

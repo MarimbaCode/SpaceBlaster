@@ -1,24 +1,3 @@
-#pragma once
-#import <StoreKit/StoreKit.h>
-#import "LifeCycleListener.h"
-
-@protocol UnityEarlyTransactionObserverDelegate <NSObject>
-
-- (void)promotionalPurchaseAttempted:(SKPayment *)payment;
-
-@end
-
-@interface UnityEarlyTransactionObserver : NSObject<SKPaymentTransactionObserver, LifeCycleListener> {
-    NSMutableSet *m_QueuedPayments;
-}
-
-@property BOOL readyToReceiveTransactionUpdates;
-
-// The delegate exists so that the observer can notify it of attempted promotional purchases. 
-@property(nonatomic, weak) id<UnityEarlyTransactionObserverDelegate> delegate;
-
-+ (UnityEarlyTransactionObserver*)defaultObserver;
-
-- (void)initiateQueuedPayments;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cd6a42de0a472eb3f4759c40b4f81a41466cb22a0141fc3fcc353e01fef3a67
+size 657

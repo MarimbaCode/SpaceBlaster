@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Advanced", "Length")]
-    class LengthNode : CodeFunctionNode
-    {
-        public LengthNode()
-        {
-            name = "Length";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Length", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Length(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out Vector1 Out)
-        {
-            return
-                @"
-{
-    Out = length(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d3f5c4e3074412a0a5317e3a9e6212482249fd33b876218b55b97d2039b57af
+size 660

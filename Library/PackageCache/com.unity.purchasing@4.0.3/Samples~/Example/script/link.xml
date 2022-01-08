@@ -1,12 +1,3 @@
-<linker>
-    <assembly fullname="UnityEngine.Purchasing">
-        <type fullname="UnityEngine.Purchasing.Extension.IPurchasingBinder" preserve="all"/>
-    </assembly>
-    <assembly fullname="Stores">
-        <type fullname="UnityEngine.Purchasing.CloudCatalogImpl" preserve="all"/>
-        <type fullname="UnityEngine.Purchasing.Promo" preserve="all"/>
-    </assembly>
-    <assembly fullname="mscorlib">
-        <type fullname="System.Security.Cryptography.*" preserve="all"/>
-    </assembly>
-</linker>
+version https://git-lfs.github.com/spec/v1
+oid sha256:9eed65f67f829f4987ac60ea51444e5fbc5bbcbae1e1d18fe7457f93ca3b4110
+size 503

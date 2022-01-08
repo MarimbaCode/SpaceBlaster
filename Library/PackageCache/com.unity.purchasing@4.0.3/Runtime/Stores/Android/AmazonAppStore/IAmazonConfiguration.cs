@@ -1,18 +1,3 @@
-﻿using System.Collections.Generic;
-using UnityEngine.Purchasing;
-using UnityEngine.Purchasing.Extension;
-
-namespace UnityEngine.Purchasing
-{
-	/// <summary>
-	/// Access Amazon store specific configurations.
-	/// </summary>
-    public interface IAmazonConfiguration : IStoreConfiguration
-	{
-		/// <summary>
-		/// To use for Amazon’s local Sandbox testing app, generate a JSON description of your product catalog on the device’s SD card.
-        /// </summary>
-		/// <param name="products">Products to add to the testing app JSON.</param>
-        void WriteSandboxJSON(HashSet<ProductDefinition> products);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b0822bb423144e771b5f790d641dc6d78f3d4d5fb12a841cd546f9b316bf1dd
+size 615

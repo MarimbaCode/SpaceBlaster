@@ -1,5 +1,3 @@
-com.unity.render-pipelines.universal copyright © 2020 Unity Technologies ApS
-
-Licensed under the Unity Companion License for Unity-dependent projects--see [Unity Companion License](http://www.unity3d.com/legal/licenses/Unity_Companion_License). 
-
-Unless expressly provided otherwise, the Software under this license is made available strictly on an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc39d4eed677feb1ebae752543e43fbd716ae4bf87a57ffb7e2c912dd470d79a
+size 497

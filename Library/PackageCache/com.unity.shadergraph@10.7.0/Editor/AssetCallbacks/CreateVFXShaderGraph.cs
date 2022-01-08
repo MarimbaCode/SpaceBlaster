@@ -1,23 +1,3 @@
-#if VFX_GRAPH_10_0_0_OR_NEWER
-using System;
-using UnityEditor.ShaderGraph;
-namespace UnityEditor.ShaderGraph
-{
-    static class CreateVFXShaderGraph
-    {
-        [MenuItem("Assets/Create/Shader/VFX Shader Graph", false, 208)]
-        public static void CreateVFXGraph()
-        {
-            var target = (VFXTarget)Activator.CreateInstance(typeof(VFXTarget));
-
-            var blockDescriptors = new [] 
-            { 
-                BlockFields.SurfaceDescription.BaseColor,
-                BlockFields.SurfaceDescription.Alpha,
-            };
-
-            GraphUtil.CreateNewGraphWithOutputs(new [] {target}, blockDescriptors);
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:fb2d1235fd7541c90c4abd0cf76bc128e0b5898c7b7885787f932a861580888c
+size 658

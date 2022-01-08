@@ -1,14 +1,3 @@
-# Testing
-
-## Simulator
-
-Unity IAP features support for Microsoft's In App Purchase simulator, which allows you to test IAP purchase flows on devices before publishing your application.
-
-The simulator can be enabled when configuring Unity IAP before initialization, as follows:
-
-````
-var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
-builder.Configure<IMicrosoftConfiguration>().useMockBillingSystem = true;
-````
-Make sure you disable the mock billing system before publishing your application.
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:463e73ee55db902ec6d89d4f17ea43e90e74abcd846332447cab0f6a22ec1c94
+size 528

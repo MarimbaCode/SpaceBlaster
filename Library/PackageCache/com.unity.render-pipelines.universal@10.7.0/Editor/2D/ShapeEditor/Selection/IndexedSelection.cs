@@ -1,13 +1,3 @@
-using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace UnityEditor.Experimental.Rendering.Universal.Path2D
-{
-    [Serializable]
-    internal class IndexedSelection : SerializableSelection<int>
-    {
-        protected override int GetInvalidElement() { return -1; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ebca543da8320732b37fcaa4a67c48c4835b949efa1c8f6d1d78a729616ec90f
+size 322

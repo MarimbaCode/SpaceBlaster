@@ -1,5 +1,3 @@
-# Backend Receipt Validation
-
-Backend receipt validation helps you prevent users from accessing content they have not purchased.
-
-For server-side content, where content is downloaded once purchased, the validation should take place on the server before the content is released. Unity does not offer support for server-side validation; however, third-party solutions are available, such as Nobuyori Takahashi’s [IAP project](https://github.com/voltrue2/in-app-purchase).
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae43b4414e384e8df6aa7fd0ef498ef92b6202e27a0a17ba9d1ed98c93269221
+size 471

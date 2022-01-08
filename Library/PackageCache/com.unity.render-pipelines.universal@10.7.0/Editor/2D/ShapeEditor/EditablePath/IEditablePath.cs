@@ -1,24 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityEditor.Experimental.Rendering.Universal.Path2D
-{
-    internal interface IEditablePath : ISelectable<Vector3>
-    {
-        ShapeType shapeType { get; set; }
-        IUndoObject undoObject { get; set; }
-        ISelection<int> selection { get; }
-        Matrix4x4 localToWorldMatrix { get; set; }
-        Vector3 forward { get; set; }
-        Vector3 up { get; set; }
-        Vector3 right { get; set; }
-        bool isOpenEnded { get; set; }
-        int pointCount { get; }
-        ControlPoint GetPoint(int index);
-        void SetPoint(int index, ControlPoint controlPoint);
-        void AddPoint(ControlPoint controlPoint);
-        void InsertPoint(int index, ControlPoint controlPoint);
-        void RemovePoint(int index);
-        void Clear();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f2e6ad21a1ac733dd0d4f083f891f9d8559899d6f8f407b11b845ab921853ab
+size 827

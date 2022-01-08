@@ -1,35 +1,3 @@
-using System;
-using UnityEditor.Graphing;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Serializable]
-    class VirtualTextureMaterialSlot : MaterialSlot
-    {
-        public VirtualTextureMaterialSlot()
-        {}
-
-        public VirtualTextureMaterialSlot(
-            int slotId,
-            string displayName,
-            string shaderOutputName,
-            SlotType slotType,
-            ShaderStageCapability stageCapability = ShaderStageCapability.All,
-            bool hidden = false)
-            : base(slotId, displayName, shaderOutputName, slotType, stageCapability, hidden)
-        {}
-
-        public override SlotValueType valueType { get { return SlotValueType.VirtualTexture; } }
-        public override ConcreteSlotValueType concreteValueType { get { return ConcreteSlotValueType.VirtualTexture; } }
-
-        public override void AddDefaultProperty(PropertyCollector properties, GenerationMode generationMode)
-        {
-        }
-
-        public override void CopyValuesFrom(MaterialSlot foundSlot)
-        {
-        }
-
-        public override bool isDefaultValue => throw new Exception();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:42ba4fb0ea8427d79ff012a5f047d3fa995099ee1fca0ded535701424ae42f64
+size 1112

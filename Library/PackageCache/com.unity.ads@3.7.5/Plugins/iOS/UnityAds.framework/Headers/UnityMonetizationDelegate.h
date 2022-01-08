@@ -1,12 +1,3 @@
-#import <UnityAds/UMONPlacementContent.h>
-#import <UnityAds/UnityMonetizationPlacementContentState.h>
-#import <UnityAds/UnityServices.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@protocol UnityMonetizationDelegate <UnityServicesDelegate>
-- (void)placementContentReady: (NSString *)placementId placementContent: (UMONPlacementContent *)decision;
-- (void)placementContentStateDidChange: (NSString *)placementId placementContent: (UMONPlacementContent *)placementContent previousState: (UnityMonetizationPlacementContentState)previousState newState: (UnityMonetizationPlacementContentState)newState;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4475ea57644d2284f9c59349e9bedb0e24af82e494121edd740a172a2f0bf94
+size 610

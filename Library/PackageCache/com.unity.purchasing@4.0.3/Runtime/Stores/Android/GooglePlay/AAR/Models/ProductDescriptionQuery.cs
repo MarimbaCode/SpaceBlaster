@@ -1,22 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using UnityEngine.Purchasing;
-using UnityEngine.Purchasing.Extension;
-
-namespace UnityEngine.Purchasing.Models
-{
-    class ProductDescriptionQuery
-    {
-        internal ReadOnlyCollection<ProductDefinition> products;
-        internal Action<List<ProductDescription>> onProductsReceived;
-        internal Action onRetrieveProductsFailed;
-
-        internal ProductDescriptionQuery(ReadOnlyCollection<ProductDefinition> products, Action<List<ProductDescription>> onProductsReceived, Action onRetrieveProductsFailed)
-        {
-            this.products = products;
-            this.onProductsReceived = onProductsReceived;
-            this.onRetrieveProductsFailed = onRetrieveProductsFailed;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed293b987ae6945437f9ea9f8053109297f95c3cee9e0bc5025d1a6bc6a52817
+size 794

@@ -1,33 +1,3 @@
-using System.Reflection;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Artistic", "Adjustment", "Contrast")]
-    class ContrastNode : CodeFunctionNode
-    {
-        public ContrastNode()
-        {
-            name = "Contrast";
-        }
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Contrast", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Contrast(
-            [Slot(0, Binding.None)] Vector3 In,
-            [Slot(1, Binding.None, 1, 1, 1, 1)] Vector1 Contrast,
-            [Slot(2, Binding.None)] out Vector3 Out)
-        {
-            Out = Vector2.zero;
-            return
-                @"
-{
-    $precision midpoint = pow(0.5, 2.2);
-    Out =  (In - midpoint) * Contrast + midpoint;
-}";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a94dc925a0a845babf6516f8e08e6d2e5472f6b27cf649163e79fdc19f82d585
+size 847

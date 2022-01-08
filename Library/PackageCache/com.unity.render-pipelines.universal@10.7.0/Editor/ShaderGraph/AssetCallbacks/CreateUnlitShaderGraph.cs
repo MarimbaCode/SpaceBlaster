@@ -1,25 +1,3 @@
-﻿using System;
-using UnityEditor.ShaderGraph;
-
-namespace UnityEditor.Rendering.Universal.ShaderGraph
-{
-    static class CreateUnlitShaderGraph
-    {
-        [MenuItem("Assets/Create/Shader/Universal Render Pipeline/Unlit Shader Graph", false, 300)]
-        public static void CreateUnlitGraph()
-        {
-            var target = (UniversalTarget)Activator.CreateInstance(typeof(UniversalTarget));
-            target.TrySetActiveSubTarget(typeof(UniversalUnlitSubTarget));
-
-            var blockDescriptors = new [] 
-            { 
-                BlockFields.VertexDescription.Position,
-                BlockFields.VertexDescription.Normal,
-                BlockFields.VertexDescription.Tangent,
-                BlockFields.SurfaceDescription.BaseColor,
-            };
-
-            GraphUtil.CreateNewGraphWithOutputs(new [] {target}, blockDescriptors);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48d3be83addf243a7aefab71b486d709efe640070111520a063c24e2d6af8419
+size 875

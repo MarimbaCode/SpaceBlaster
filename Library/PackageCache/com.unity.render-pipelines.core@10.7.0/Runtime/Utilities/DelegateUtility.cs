@@ -1,31 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Delegate utility class.
-    /// </summary>
-    public static class DelegateUtility
-    {
-        /// <summary>
-        /// Cast a delegate.
-        /// </summary>
-        /// <param name="source">Source delegate.</param>
-        /// <param name="type">Type of the delegate.</param>
-        /// <returns>Cast delegate.</returns>
-        public static Delegate Cast(Delegate source, Type type)
-        {
-            if (source == null)
-                return null;
-            Delegate[] delegates = source.GetInvocationList();
-            if (delegates.Length == 1)
-                return Delegate.CreateDelegate(type,
-                    delegates[0].Target, delegates[0].Method);
-            Delegate[] delegatesDest = new Delegate[delegates.Length];
-            for (int nDelegate = 0; nDelegate < delegates.Length; nDelegate++)
-                delegatesDest[nDelegate] = Delegate.CreateDelegate(type,
-                        delegates[nDelegate].Target, delegates[nDelegate].Method);
-            return Delegate.Combine(delegatesDest);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce115173d95eed0f60a087799b364a357dc8daf71cf368319f8d62becd07cf64
+size 1132

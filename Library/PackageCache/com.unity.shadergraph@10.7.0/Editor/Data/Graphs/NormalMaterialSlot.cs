@@ -1,36 +1,3 @@
-using System;
-using UnityEditor.ShaderGraph.Drawing.Slots;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Serializable]
-    class NormalMaterialSlot : SpaceMaterialSlot, IMayRequireNormal
-    {
-        public NormalMaterialSlot()
-        {}
-
-        public NormalMaterialSlot(int slotId, string displayName, string shaderOutputName, CoordinateSpace space,
-                                  ShaderStageCapability stageCapability = ShaderStageCapability.All, bool hidden = false)
-            : base(slotId, displayName, shaderOutputName, space, stageCapability, hidden)
-        {}
-
-        public override VisualElement InstantiateControl()
-        {
-            return new LabelSlotControlView(space + " Space");
-        }
-
-        public override string GetDefaultValue(GenerationMode generationMode)
-        {
-            return string.Format("IN.{0}", space.ToVariableName(InterpolatorType.Normal));
-        }
-
-        public NeededCoordinateSpace RequiresNormal(ShaderStageCapability stageCapability)
-        {
-            if (isConnected)
-                return NeededCoordinateSpace.None;
-            return space.ToNeededCoordinateSpace();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc5c15b9134ac34942d2b7ca9402799ff3fb579e46808037922bd4627bf26341
+size 1229

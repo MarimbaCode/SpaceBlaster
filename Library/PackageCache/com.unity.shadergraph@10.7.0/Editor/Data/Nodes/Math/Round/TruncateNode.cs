@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Round", "Truncate")]
-    class TruncateNode : CodeFunctionNode
-    {
-        public TruncateNode()
-        {
-            name = "Truncate";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Truncate", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Truncate(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = trunc(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bfd050f38e12f194a97b1d95d4b3974a8ad126da24cd9dbcc047016ebfbbadac
+size 683

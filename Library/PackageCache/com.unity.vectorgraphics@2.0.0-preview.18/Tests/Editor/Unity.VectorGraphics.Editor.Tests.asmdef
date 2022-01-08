@@ -1,12 +1,3 @@
-{
-    "name": "Unity.VectorGraphics.Editor.Tests",
-    "references": [
-        "Unity.VectorGraphics",
-        "Unity.VectorGraphics.Editor"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ],
-    "includePlatforms": [ "Editor" ],
-    "excludePlatforms": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5510752a37890d3c4b7ead6a46d4f879348fac5ba3ff7ec3fc6148dd4ff77176
+size 279

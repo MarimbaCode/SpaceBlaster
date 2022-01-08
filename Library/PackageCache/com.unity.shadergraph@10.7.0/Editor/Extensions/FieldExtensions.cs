@@ -1,30 +1,3 @@
-﻿using UnityEditor.ShaderGraph.Internal;
-
-namespace UnityEditor.ShaderGraph
-{
-    static class FieldExtensions
-    {
-        public static bool HasPreprocessor(this FieldDescriptor descriptor)
-        {
-            return (descriptor.preprocessor.Length > 0);
-        }
-
-        public static bool HasSemantic(this FieldDescriptor descriptor)
-        {
-            return (descriptor.semantic.Length > 0);
-        }
-
-        public static bool HasFlag(this FieldDescriptor descriptor, StructFieldOptions options)
-        {
-            return (descriptor.subscriptOptions & options) == options;
-        }
-
-        public static string ToFieldString(this FieldDescriptor descriptor)
-        {
-            if(!string.IsNullOrEmpty(descriptor.tag))
-                return $"{descriptor.tag}.{descriptor.name}";
-            else
-                return descriptor.name;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe3a3c06bda9e9ba067cf28ff97f0f4d69f77bd74aff8d58c37461e4adfd1c41
+size 883

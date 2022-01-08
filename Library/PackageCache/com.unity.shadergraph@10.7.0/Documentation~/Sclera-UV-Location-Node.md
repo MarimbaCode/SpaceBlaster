@@ -1,17 +1,3 @@
-# Sclera UV Location Node
-
-This node converts the object position of the sclera to a UV Sampling coordinate.
-
-## Render pipeline compatibility
-
-| **Node**                    | **Universal Render Pipeline (URP)** | **High Definition Render Pipeline (HDRP)** |
-| --------------------------- | ----------------------------------- | ------------------------------------------ |
-| **Sclera UV Location Node** | No                                  | Yes                                        |
-
-## Ports
-
-| name           | **Direction** | type    | description                                                  |
-| -------------- | ------------- | ------- | ------------------------------------------------------------ |
-| **PositionOS** | Input         | Vector3 | **Position of the fragment to shade in object space.**       |
-| **ScleraUV**   | Output        | Vector2 | Normalized UV coordinates that can be used to sample either a texture or procedurally generate a Sclera Texture. |
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffa4ebf64c93c544fb9cc4608816976bdb058566e70c81d71b58bb55223ee06b
+size 985

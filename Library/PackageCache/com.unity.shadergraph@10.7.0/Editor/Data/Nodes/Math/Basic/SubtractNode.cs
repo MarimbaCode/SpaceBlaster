@@ -1,32 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Basic", "Subtract")]
-    class SubtractNode : CodeFunctionNode
-    {
-        public SubtractNode()
-        {
-            name = "Subtract";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Subtract", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Subtract(
-            [Slot(0, Binding.None, 1, 1, 1, 1)] DynamicDimensionVector A,
-            [Slot(1, Binding.None, 1, 1, 1, 1)] DynamicDimensionVector B,
-            [Slot(2, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = A - B;
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4fc0c46e4a9f34a04a4c5ba0c7a707898bb826e96a705960499e1dcab3a7aae8
+size 764

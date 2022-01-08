@@ -1,31 +1,3 @@
-﻿using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Wave", "Square Wave")]
-    class SquareWaveNode : CodeFunctionNode
-    {
-        public SquareWaveNode()
-        {
-            name = "Square Wave";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("SquareWave", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string SquareWave(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = 1.0 - 2.0 * round(frac(In));
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:312904967751512f762ce89b8f1ab7256f9882ceb0499e922f9da4071250d9e8
+size 705

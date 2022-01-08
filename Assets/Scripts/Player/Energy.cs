@@ -1,28 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Energy : MonoBehaviour
-{
-
-    public int energy = 0;
-    public int maxEnergy = 20;
-    
-    public int rechargeRate = 1;
-
-
-    private void FixedUpdate()
-    {
-        if (energy <= maxEnergy)
-        {
-            energy += rechargeRate;
-            if (energy > maxEnergy)
-            {
-                energy = maxEnergy;
-            }
-        }
-
-    }
-    
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1a0fc3232f4a667ae8e5804014217839bdd5b91fa5bbe675e87e348d5108f29
+size 475

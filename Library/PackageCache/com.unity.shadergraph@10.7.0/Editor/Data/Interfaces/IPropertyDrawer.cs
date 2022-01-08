@@ -1,15 +1,3 @@
-﻿using System;
-using System.Reflection;
-using UnityEditor.ShaderGraph.Drawing;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.ShaderGraph.Drawing
-{
-    // Interface that should be implemented by any property drawer for the inspector view
-    public interface IPropertyDrawer
-    {
-        Action inspectorUpdateDelegate { get; set; }
-
-        VisualElement DrawProperty(PropertyInfo propertyInfo, object actualObject, InspectableAttribute attribute);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da5cecd4cff432aa2510a2861306203deb0f14ee2ae30a43d69252f62cd0014a
+size 467

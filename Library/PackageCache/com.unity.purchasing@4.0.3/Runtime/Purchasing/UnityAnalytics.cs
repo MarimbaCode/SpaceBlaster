@@ -1,26 +1,3 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityEngine.Purchasing
-{
-    /// <summary>
-    /// Forward transaction information to Unity Analytics.
-    /// </summary>
-    internal class UnityAnalytics : IUnityAnalytics
-    {
-        public void Transaction(string productId, decimal price, string currency, string receipt, string signature)
-        {
-#if ENABLE_CLOUD_SERVICES_ANALYTICS
-            Analytics.Analytics.Transaction(productId, price, currency, receipt, signature, true);
-#endif
-        }
-
-        public void CustomEvent(string name, Dictionary<string, object> data)
-        {
-#if ENABLE_CLOUD_SERVICES_ANALYTICS
-            Analytics.Analytics.CustomEvent(name, data);
-#endif
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac8e4ca4bc786221e10bea6eb22b89c0ec6e32aa5a137e5fa8bda68faadd699e
+size 743

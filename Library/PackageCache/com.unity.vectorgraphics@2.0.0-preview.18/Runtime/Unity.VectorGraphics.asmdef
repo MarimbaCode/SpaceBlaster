@@ -1,17 +1,3 @@
-{
-    "name": "Unity.VectorGraphics",
-    "rootNamespace": "",
-    "references": [
-        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
-        "GUID:23e4d4cdb75716543b20190a2c20c09a"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed52dcae35315716e061a264c6603a2f66056d3283b5f5291914802c93cfedca
+size 455

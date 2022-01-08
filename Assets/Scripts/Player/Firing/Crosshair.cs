@@ -1,28 +1,3 @@
-using UnityEngine;
-
-namespace Player.Firing
-{
-    public class Crosshair : MonoBehaviour
-    {
-
-        private void Start()
-        {
-            Cursor.visible = false;
-        }
-
-        // Update is called once per frame
-        void FixedUpdate()
-        {
-        
-            Camera camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-
-            if (camera != null)
-            {
-                Vector3 position = camera.ScreenToWorldPoint(Input.mousePosition);
-                position.z = 0;
-                transform.position = position;
-
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d0b03266ef491168491880d82c6ee9158f45cd2a8e380826f54766eef2d04df
+size 443

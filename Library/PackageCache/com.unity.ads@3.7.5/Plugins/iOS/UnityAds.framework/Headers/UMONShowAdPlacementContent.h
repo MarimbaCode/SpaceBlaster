@@ -1,14 +1,3 @@
-#import <UIKit/UIViewController.h>
-#import <UnityAds/UMONRewardablePlacementContent.h>
-#import <UnityAds/UnityAdsFinishState.h>
-
-@protocol UMONShowAdDelegate <NSObject>
-- (void)unityAdsDidStart: (NSString *)placementId;
-- (void)unityAdsDidFinish: (NSString *)placementId withFinishState: (UnityAdsFinishState)finishState;
-@end
-
-@interface UMONShowAdPlacementContent : UMONRewardablePlacementContent
-@property (strong, nonatomic) id<UMONShowAdDelegate> delegate;
-- (void)show: (UIViewController *)viewController;
-- (void)show: (UIViewController *)viewController withDelegate: (id<UMONShowAdDelegate>)delegate;
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:81c6973163672d04dfde78824413e1ff7ca7363fed736ffd85d3b15308d14236
+size 614

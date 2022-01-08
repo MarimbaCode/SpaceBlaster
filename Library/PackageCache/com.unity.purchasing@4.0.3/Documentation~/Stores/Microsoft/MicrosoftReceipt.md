@@ -1,8 +1,3 @@
-# Purchase Receipt
-
-All receipts have the base receipt information found [here](../../SetupIAP/PurchasingFlow/UnityIAPPurchaseReceipts.md).
-
-Universal Windows Platform
--------------
-
-Payload is an XML string as [specified by Microsoft](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync?view=winrt-20348#Windows_ApplicationModel_Store_CurrentApp_GetAppReceiptAsync)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6bf0e268933e9487603f7050c4293bb5089885715b853c92ba2e99f04e5b7d4
+size 417

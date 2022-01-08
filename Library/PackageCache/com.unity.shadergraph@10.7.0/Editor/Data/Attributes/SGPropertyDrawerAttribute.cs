@@ -1,15 +1,3 @@
-﻿using System;
-
-namespace UnityEditor.ShaderGraph.Drawing
-{
-    [AttributeUsage(AttributeTargets.Class)]
-    public class SGPropertyDrawerAttribute : Attribute
-    {
-        public Type propertyType { get; private set; }
-
-        public SGPropertyDrawerAttribute(Type propertyType)
-        {
-            this.propertyType = propertyType;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:061c21e923b9d66ed685b7ee0d7854c126495da983786f92898bfb3015910251
+size 358

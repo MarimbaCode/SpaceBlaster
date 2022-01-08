@@ -1,22 +1,3 @@
-using UnityEditor;
-using UnityEditor.Build;
-using UnityEditor.Build.Reporting;
-
-namespace UnityEditor.Purchasing
-{
-    internal class BuildPreprocessor : IPreprocessBuildWithReport
-    {
-        public int callbackOrder
-        {
-            get { return 0; }
-        }
-
-        public void OnPreprocessBuild(BuildReport report)
-        {
-            if (report.summary.platform == BuildTarget.WSAPlayer)
-            {
-                WinRTPatcher.PatchWinRTBuild();
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0525ff66ca7304a63a02418a0f628c21a6b8d3f25bf9958bd1b6b072ac6762fc
+size 499

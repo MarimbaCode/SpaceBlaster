@@ -1,4 +1,3 @@
-# Legacy Input Helpers Package
-
-This package is the new home of the Tracked Pose Driver monobehaviour. The Tracked Pose Driver is intended to make it easy to make Game Objects track input device data.
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:605fc288bc4ed566b702e480363d94d9ddd08043904f0429791f2d5233d7cf45
+size 202

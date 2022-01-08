@@ -1,27 +1,3 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Scripting.APIUpdating;
-
-namespace UnityEditor.Rendering.Universal.ShaderGUI
-{
-    [MovedFrom("UnityEditor.Rendering.LWRP.ShaderGUI")] public static class BakedLitGUI
-    {
-        public struct BakedLitProperties
-        {
-            // Surface Input Props
-            public MaterialProperty bumpMapProp;
-
-            public BakedLitProperties(MaterialProperty[] properties)
-            {
-                // Surface Input Props
-                bumpMapProp = BaseShaderGUI.FindProperty("_BumpMap", properties, false);
-            }
-        }
-
-        public static void Inputs(BakedLitProperties properties, MaterialEditor materialEditor)
-        {
-            BaseShaderGUI.DrawNormalArea(materialEditor, properties.bumpMapProp);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1024865e18aa621b70056f37718fe8f9b9613e38997edee842952b60a904d962
+size 833

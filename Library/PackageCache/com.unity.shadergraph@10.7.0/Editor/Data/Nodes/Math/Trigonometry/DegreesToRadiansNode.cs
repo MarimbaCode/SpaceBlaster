@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Trigonometry", "Degrees To Radians")]
-    class DegreesToRadiansNode : CodeFunctionNode
-    {
-        public DegreesToRadiansNode()
-        {
-            name = "Degrees To Radians";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_DegreesToRadians", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_DegreesToRadians(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = radians(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29f038f651cce25cf35edcf0df8e4831886f8f7ecf22051e29c5c0988aa53074
+size 744

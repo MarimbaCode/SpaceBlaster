@@ -1,30 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace Player.Firing
-{
-    public class PlayerFireNebulaBolt : PlayerFiring
-    {
-        public int speed;
-
-        public GameObject bulletPrefab;
-        private void Start()
-        {
-            Init();
-
-            FireSpeed = 1f;
-
-            bulletPrefab = Resources.Load(PrefabPath + "NebulaBolt") as GameObject;
-        }
-
-        public override void Fire()
-        {
-            GameObject projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(AimDirection.normalized * 0.2f), Quaternion.identity);
-            NebulaBoltMovement movement = projectile.GetComponent<NebulaBoltMovement>();
-            movement.side = "player";
-            movement.pierce = 4;
-            movement.damage = 1;
-            movement.direction = AimDirection.normalized * 4;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6820abd87006c492bb33b655e6433e4298ad6dae3ef8c1e29c0f87b5900b4e6
+size 859

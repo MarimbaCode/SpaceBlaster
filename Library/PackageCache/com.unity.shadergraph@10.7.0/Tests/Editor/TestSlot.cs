@@ -1,36 +1,3 @@
-using UnityEditor.Graphing;
-
-namespace UnityEditor.ShaderGraph
-{
-    class TestSlot : MaterialSlot
-    {
-        public TestSlot() {}
-
-        public TestSlot(int slotId, string displayName, SlotType slotType, ShaderStageCapability stageCapability = ShaderStageCapability.All, bool hidden = false)
-            : base(slotId, displayName, displayName, slotType, stageCapability, hidden) {}
-
-        public override SlotValueType valueType
-        {
-            get { return SlotValueType.Vector4; }
-        }
-
-        public override ConcreteSlotValueType concreteValueType
-        {
-            get { return ConcreteSlotValueType.Vector4; }
-        }
-
-        public override bool isDefaultValue => true;
-
-        public override void AddDefaultProperty(PropertyCollector properties, GenerationMode generationMode)
-        {
-        }
-
-        public override void CopyDefaultValue(MaterialSlot other)
-        {
-        }
-
-        public override void CopyValuesFrom(MaterialSlot foundSlot)
-        {
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e3d45fadd8e52969f9efe7bf7f7e9872f20da09d1be2e902674ba518fd4daef
+size 1019

@@ -1,26 +1,3 @@
-#import <UnityAds/UMONPlacementContent.h>
-#import <UnityAds/UMONRewardablePlacementContent.h>
-#import <UnityAds/UMONShowAdPlacementContent.h>
-#import <UnityAds/UMONPromoAdPlacementContent.h>
-#import <UnityAds/UMONNativePromoAdapter.h>
-#import <UnityAds/UnityMonetizationDelegate.h>
-#import <UnityAds/UnityMonetizationPlacementContentState.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-__attribute__((deprecated("Please use the UnityAds interface")))
-@interface UnityMonetization : NSObject
-+ (void)setDelegate: (id <UnityMonetizationDelegate>)delegate;
-+ (nullable id <UnityMonetizationDelegate>)getDelegate;
-+ (BOOL)isReady: (NSString *)placementId;
-+ (nullable UMONPlacementContent *)getPlacementContent: (NSString *)placementId;
-
-+ (void)initialize: (NSString *)gameId
-          delegate: (nullable id<UnityMonetizationDelegate>)delegate;
-
-+ (void)initialize: (NSString *)gameId
-          delegate: (nullable id<UnityMonetizationDelegate>)delegate
-          testMode: (BOOL)testMode;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e8dd4aaa48336b9a42335b555d3cb878d23dd9f0b0c669cc79c395272299f7a
+size 998

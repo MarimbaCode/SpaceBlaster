@@ -1,13 +1,3 @@
-# Upgrading to version 8.0.0 of the Universal Render Pipeline
-
-This page describes how to upgrade from an older version of the Universal Render Pipeline (URP) to version 8.0.0.
-
-## Upgrading from URP 7.2.x and later
-
-1. URP 8.x.x does not support the package Post-Processing Stack v2. If your Project uses the package Post-Processing Stack v2, migrate the effects that use this package first.
-
-## Upgrading from URP 7.0.x-7.1.x
-
-1. Upgrade to URP 7.2.0 first. Refer to [Upgrading to version 7.2.0 of the Universal Render Pipeline](upgrade-guide-7-2-0).
-
-2. URP 8.x.x does not support the package Post-Processing Stack v2. If your Project uses the package Post-Processing Stack v2, migrate the effects that use this package first.
+version https://git-lfs.github.com/spec/v1
+oid sha256:43af5e3b7eabd81f15a2488a2ac8e6907d575207b3710b49c6c3461a8660f0ce
+size 730

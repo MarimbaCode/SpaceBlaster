@@ -1,22 +1,3 @@
-using UnityEngine;
-
-namespace UnityEngine.Purchasing.Models
-{
-    /// <summary>
-    /// This is C# representation of the Java Class BillingResult
-    /// <a href="https://developer.android.com/reference/com/android/billingclient/api/BillingResult">See more</a>
-    /// </summary>
-    class GoogleBillingResult : IGoogleBillingResult
-    {
-        public GoogleBillingResponseCode responseCode { get; }
-        public string debugMessage { get; }
-        internal GoogleBillingResult(AndroidJavaObject billingResult)
-        {
-            if (billingResult != null)
-            {
-                responseCode = (GoogleBillingResponseCode) billingResult.Call<int>("getResponseCode");
-                debugMessage = billingResult.Call<string>("getDebugMessage");
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5fdff5f6acf322fe9a67f89172b99f49896adfd9a89792c50932037693bbe1b
+size 792

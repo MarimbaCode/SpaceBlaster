@@ -1,4 +1,3 @@
-Unity Monetization © 2020 Unity Technologies SF
-Your use of the Unity Technologies SF ("Unity') software known as "Unity Monetization" is subject to the Unity Monetization Services Terms of Service linked to and copied immediately below.
-[Unity Monetization Services TOS](https://unity3d.com/legal/monetization-services-terms-of-service)
-Your use of the Unity Monetization software constitutes your acceptance of such terms. Unless expressly provided otherwise, the software under this license is made available strictly on an "AS IS" BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8beb1752a32917eb2c5bbd322d8e1e4c041cdfe72444ee42da856c0c41434a4
+size 670

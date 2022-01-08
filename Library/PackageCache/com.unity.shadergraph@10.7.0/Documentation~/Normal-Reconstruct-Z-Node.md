@@ -1,25 +1,3 @@
-# Normal Reconstruct Z Node
-
-## Description
-
-Derives the correct Z value for generated normal maps using a given **X** and **Y** value from input **In**.
-
-## Ports
-
-| Name        | Direction           | Type  | Description |
-|:------------ |:-------------|:-----|:---|
-| In      | Input | Vector 2 | Normal X and Y value |
-| Out | Output      |    Vector 3 | Output value |
-
-## Generated Code Example
-
-The following example code represents one possible outcome of this node.
-
-```
-void Unity_NormalReconstructZ_float(float2 In, out float3 Out)
-{
-    float reconstructZ = sqrt(1.0 - saturate(dot(In.xy, In.xy)));
-    float3 normalVector = float3(In.x, In.y, reconstructZ);
-    Out = normalize(normalVector);
-}
-```
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0a92c68a3f0871c64cb37232e0022f0ca70720710173d435b2dfd9eeb61edf4
+size 711

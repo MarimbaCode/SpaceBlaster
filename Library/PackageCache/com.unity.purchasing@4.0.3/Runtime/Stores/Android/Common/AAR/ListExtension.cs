@@ -1,22 +1,3 @@
-using System.Collections.Generic;
-
-namespace UnityEngine.Purchasing
-{
-    static class ListExtension
-    {
-        internal static AndroidJavaObject ToJava(this List<string> values)
-        {
-            return ToJavaArray(values);
-        }
-
-        static AndroidJavaObject ToJavaArray(List<string> values)
-        {
-            AndroidJavaObject list = new AndroidJavaObject("java.util.ArrayList");
-            foreach (string value in values)
-            {
-                list.Call<bool>("add", value);
-            }
-            return list;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a33b564b5423ebf5f82cdacde48e5fc67e0d9f968c34b3888e381439a7f69d02
+size 565

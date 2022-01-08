@@ -1,34 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering.Universal
-{
-    [Serializable, VolumeComponentMenu("Post-processing/Color Adjustments")]
-    public sealed class ColorAdjustments : VolumeComponent, IPostProcessComponent
-    {
-        [Tooltip("Adjusts the overall exposure of the scene in EV100. This is applied after HDR effect and right before tonemapping so it won't affect previous effects in the chain.")]
-        public FloatParameter postExposure = new FloatParameter(0f);
-
-        [Tooltip("Expands or shrinks the overall range of tonal values.")]
-        public ClampedFloatParameter contrast = new ClampedFloatParameter(0f, -100f, 100f);
-
-        [Tooltip("Tint the render by multiplying a color.")]
-        public ColorParameter colorFilter = new ColorParameter(Color.white, true, false, true);
-
-        [Tooltip("Shift the hue of all colors.")]
-        public ClampedFloatParameter hueShift = new ClampedFloatParameter(0f, -180f, 180f);
-
-        [Tooltip("Pushes the intensity of all colors.")]
-        public ClampedFloatParameter saturation = new ClampedFloatParameter(0f, -100f, 100f);
-
-        public bool IsActive()
-        {
-            return postExposure.value != 0f
-                || contrast.value != 0f
-                || colorFilter != Color.white
-                || hueShift != 0f
-                || saturation != 0f;
-        }
-
-        public bool IsTileCompatible() => true;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:50ca735603a75fb372c4f14604814a74f845ea2cc064ac2d9a2907e1bf803e13
+size 1409

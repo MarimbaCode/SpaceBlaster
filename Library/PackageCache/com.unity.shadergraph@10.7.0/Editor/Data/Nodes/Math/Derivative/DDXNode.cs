@@ -1,32 +1,3 @@
-using System.Reflection;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Derivative", "DDX")]
-    class DDXNode : CodeFunctionNode
-    {
-        public DDXNode()
-        {
-            name = "DDX";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_DDX", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_DDX(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None, ShaderStageCapability.Fragment)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = ddx(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:caad5f4edd111214102d804816ce633fcaf29b82165bdc413dc35710002d8475
+size 707

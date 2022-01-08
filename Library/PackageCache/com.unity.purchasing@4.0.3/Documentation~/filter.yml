@@ -1,5 +1,3 @@
-apiRules:
-  - exclude:
-      # exclude mentions of samples in Scripting API docs
-      uidRegex: ^Samples\.Purchasing\..*
-      type: Namespace
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e0a3b9f59227a1cc016b989cb9193730cfd68539598cb2f1a88d8037f10f815
+size 144

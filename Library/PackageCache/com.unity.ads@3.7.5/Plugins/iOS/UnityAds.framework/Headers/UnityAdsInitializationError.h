@@ -1,19 +1,3 @@
-/**
- *  An enumeration for the error category of initialization errors
- */
-typedef NS_ENUM (NSInteger, UnityAdsInitializationError) {
-    /**
-     *  Error related to environment or internal services.
-     */
-    kUnityInitializationErrorInternalError,
-
-    /**
-     * Error related to invalid arguments
-     */
-    kUnityInitializationErrorInvalidArgument,
-
-    /**
-     * Error related to url being blocked
-     */
-    kUnityInitializationErrorAdBlockerDetected
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:872af3b6fb0013d6caf3627d7274b1724fe0bd137d26f5e66e53b758f2a22fe8
+size 467

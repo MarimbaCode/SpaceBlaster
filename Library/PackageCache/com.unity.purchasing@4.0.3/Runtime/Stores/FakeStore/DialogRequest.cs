@@ -1,17 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-namespace UnityEngine.Purchasing
-{
-    /// <summary>
-    /// Dialog request base model
-    /// </summary>
-    internal class DialogRequest
-    {
-        public string QueryText;
-        public string OkayButtonText;
-        public string CancelButtonText;
-        public List<string> Options;
-        public Action<bool,int> Callback;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d916aa608441f8e8f2bdcfc47cd29703bd10b0921081542b57c919b9858ddb9c
+size 392

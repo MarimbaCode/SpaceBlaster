@@ -1,32 +1,3 @@
-using System;
-using System.Linq;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEngine;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.ShaderGraph.Drawing.Colors
-{
-    class PrecisionColors : ColorProviderFromStyleSheet
-    {
-        public override string GetTitle() => "Precision";
-
-        public override bool AllowCustom() => false;
-
-        public override bool ClearOnDirty() => true;
-        
-        protected override bool GetClassFromNode(AbstractMaterialNode node, out string ussClass)
-        {
-            ussClass = node.concretePrecision.ToString();
-
-            return !string.IsNullOrEmpty(ussClass);
-        }
-
-        public override void ClearColor(IShaderNodeView nodeView)
-        {
-            foreach (var type in ConcretePrecision.GetValues(typeof(ConcretePrecision)))
-            {
-                nodeView.colorElement.RemoveFromClassList(type.ToString());
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fb3acaeda59704559657fd83c0e26aeffd914957ee82be952146b4907155b2f7
+size 927

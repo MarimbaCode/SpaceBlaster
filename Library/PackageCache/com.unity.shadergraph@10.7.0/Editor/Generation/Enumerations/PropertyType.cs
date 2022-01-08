@@ -1,23 +1,3 @@
-namespace UnityEditor.ShaderGraph.Internal
-{
-    [GenerationAPI]
-    public enum PropertyType
-    {
-        Color,
-        Texture2D,
-        Texture2DArray,
-        Texture3D,
-        Cubemap,
-        Gradient,
-        Boolean,
-        Float,
-        Vector2,
-        Vector3,
-        Vector4,
-        Matrix2,
-        Matrix3,
-        Matrix4,
-        SamplerState,
-        VirtualTexture
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1e1a638acc2ae80c32068d9f98f3820280fd8176293ba8e707a12b3b2aed51c
+size 399

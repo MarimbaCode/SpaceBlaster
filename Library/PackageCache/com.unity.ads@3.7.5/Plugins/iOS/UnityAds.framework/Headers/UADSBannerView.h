@@ -1,19 +1,3 @@
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <UnityAds/UADSBannerViewDelegate.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UADSBannerView : UIView
-
-@property (nonatomic, readonly) CGSize size;
-@property (nonatomic, readwrite, nullable, weak) NSObject <UADSBannerViewDelegate> *delegate;
-@property (nonatomic, readonly) NSString *placementId;
-
-- (instancetype)initWithPlacementId: (NSString *)placementId size: (CGSize)size;
-
-- (void)        load;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:d03f051bd95fa9690e95118b2a5e3604f8fae365b6a707a729140ce37a794504
+size 492

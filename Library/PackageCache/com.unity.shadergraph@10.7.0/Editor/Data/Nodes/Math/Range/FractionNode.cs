@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Range", "Fraction")]
-    class FractionNode : CodeFunctionNode
-    {
-        public FractionNode()
-        {
-            name = "Fraction";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Fraction", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Fraction(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = frac(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0bc2f9e2084c2fa8a14a6fd36d9f749a17ccfbefb071cbc729c7a829fefb5055
+size 682

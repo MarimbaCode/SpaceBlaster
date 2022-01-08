@@ -1,17 +1,3 @@
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UMONCustomEventBuilder : NSObject
-@property (nonatomic) NSString *category;
-@property (nonatomic) NSString *type;
-@property (nonatomic) NSDictionary *userInfo;
-@end
-
-@interface UMONCustomEvent : NSObject
-@property (strong) NSString *category;
-@property (strong) NSString *type;
-@property (strong) NSDictionary *userInfo;
-- (instancetype)initWithBuilder: (UMONCustomEventBuilder *)builder;
-+ (instancetype)build: (void (^)(UMONCustomEventBuilder *))buildBlock;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:43745a33a8ba4534e5b314f2a7d6c3189c3f7feea0f61341dfee390daa725469
+size 524

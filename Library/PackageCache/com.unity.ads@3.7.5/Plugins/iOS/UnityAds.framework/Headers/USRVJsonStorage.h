@@ -1,13 +1,3 @@
-@interface USRVJsonStorage : NSObject
-
-@property (nonatomic, strong) NSMutableDictionary *storageContents;
-
-- (BOOL)set: (NSString *)key value: (id)value;
-- (id)getValueForKey: (NSString *)key;
-- (BOOL)deleteKey: (NSString *)key;
-- (NSArray *)getKeys: (NSString *)key recursive: (BOOL)recursive;
-- (void)     clearData;
-- (BOOL)     initData;
-- (BOOL)     hasData;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b250b7062717be9e1650a814e0562d91d6d3cf40be5c3eae009123e8e6bd565a
+size 371

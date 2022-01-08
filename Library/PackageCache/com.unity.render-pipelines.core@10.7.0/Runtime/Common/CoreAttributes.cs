@@ -1,16 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Attribute used to customize UI display.
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Field)]
-    public class DisplayInfoAttribute : Attribute
-    {
-        /// <summary>Display name used in UI.</summary>
-        public string name;
-        /// <summary>Display order used in UI.</summary>
-        public int order;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:96b1db8183742e1f5e9e9f87c2a67be264d0b3e7d087a9fe3419e2f0798ddcb0
+size 410

@@ -1,36 +1,3 @@
-using System;
-using UnityEditor.ShaderGraph.Drawing.Slots;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Serializable]
-    class BitangentMaterialSlot : SpaceMaterialSlot, IMayRequireBitangent
-    {
-        public BitangentMaterialSlot() : base()
-        {}
-
-        public BitangentMaterialSlot(int slotId, string displayName, string shaderOutputName, CoordinateSpace space,
-                                     ShaderStageCapability stageCapability = ShaderStageCapability.All, bool hidden = false)
-            : base(slotId, displayName, shaderOutputName, space, stageCapability, hidden)
-        {}
-
-        public override VisualElement InstantiateControl()
-        {
-            return new LabelSlotControlView(space + " Space");
-        }
-
-        public override string GetDefaultValue(GenerationMode generationMode)
-        {
-            return string.Format("IN.{0}", space.ToVariableName(InterpolatorType.BiTangent));
-        }
-
-        public NeededCoordinateSpace RequiresBitangent(ShaderStageCapability stageCapability)
-        {
-            if (isConnected)
-                return NeededCoordinateSpace.None;
-            return space.ToNeededCoordinateSpace();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1218f38ecea108f8501e33d21cff189983443f41ee9dd12141bbcfa40ddd86e
+size 1259

@@ -1,33 +1,3 @@
-namespace UnityEditor.Purchasing
-{
-    class PurchasingEnabledState : BasePurchasingState
-    {
-        internal const string k_StateNameEnabled = "EnabledState";
-
-        GoogleConfigurationData m_GoogleConfigData;
-
-        public PurchasingEnabledState(SimpleStateMachine<PurchasingServiceToggleEvent> stateMachine)
-            : base(k_StateNameEnabled, stateMachine)
-        {
-            m_GoogleConfigData = new GoogleConfigurationData();
-
-            m_UIBlocks.Add(new GooglePlayConfigurationSettingsBlock(m_GoogleConfigData));
-            m_UIBlocks.Add(new AppleConfigurationSettingsBlock());
-            m_UIBlocks.Add(new IapCatalogServiceSettingsBlock());
-
-            ModifyActionForEvent(PurchasingServiceToggleEvent.Disabled, HandleDisabling);
-        }
-
-        SimpleStateMachine<PurchasingServiceToggleEvent>.State HandleDisabling(PurchasingServiceToggleEvent raisedEvent)
-        {
-            return stateMachine.GetStateByName(PurchasingDisabledState.k_StateNameDisabled);
-        }
-
-        protected override AnalyticsNoticeBlock CreateAnalyticsNoticeBlock()
-        {
-            return AnalyticsNoticeBlock.CreateEnabledAnalyticsBlock();
-        }
-
-        internal override bool IsEnabled() => true;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e9f232df0da2a0d1afffe069188bd26beb86f338cf34ec729312b6dc6843142
+size 1235

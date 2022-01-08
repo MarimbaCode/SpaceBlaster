@@ -1,17 +1,3 @@
-﻿PackedVaryings vert(Attributes input)
-{
-    Varyings output = (Varyings)0;
-    output = BuildVaryings(input);
-    PackedVaryings packedOutput = PackVaryings(output);
-    return packedOutput;
-}
-
-half4 frag(PackedVaryings packedInput) : SV_TARGET 
-{    
-    Varyings unpacked = UnpackVaryings(packedInput);
-
-    SurfaceDescriptionInputs surfaceDescriptionInputs = BuildSurfaceDescriptionInputs(unpacked);
-    SurfaceDescription surfaceDescription = SurfaceDescriptionFunction(surfaceDescriptionInputs);
-
-    return surfaceDescription.Out;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:727da84d678b2846bb9fa7394fedea3a427acb5bdf4ea8150e4453be4346e493
+size 542

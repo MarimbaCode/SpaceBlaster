@@ -1,7 +1,3 @@
-﻿using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("Unity.VectorGraphics.Tests")]
-[assembly: InternalsVisibleTo("Unity.VectorGraphics.Editor")]
-[assembly: InternalsVisibleTo("Unity.VectorGraphics.Editor.Tests")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEditorBridge.003")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:60fecdbeb4bb92d79a2882874d2dc49101f92b4a42d6ead9bd41450786e96174
+size 370

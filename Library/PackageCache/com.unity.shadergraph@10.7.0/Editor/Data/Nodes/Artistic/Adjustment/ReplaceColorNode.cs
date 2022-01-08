@@ -1,36 +1,3 @@
-using System.Reflection;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Artistic", "Adjustment", "Replace Color")]
-    class ReplaceColorNode : CodeFunctionNode
-    {
-        public ReplaceColorNode()
-        {
-            name = "Replace Color";
-        }
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_ReplaceColor", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_ReplaceColor(
-            [Slot(0, Binding.None)] Vector3 In,
-            [Slot(1, Binding.None)] ColorRGB From,
-            [Slot(2, Binding.None)] ColorRGB To,
-            [Slot(3, Binding.None)] Vector1 Range,
-            [Slot(5, Binding.None)] Vector1 Fuzziness,
-            [Slot(4, Binding.None)] out Vector3 Out)
-        {
-            Out = Vector3.zero;
-            return
-                @"
-{
-    $precision Distance = distance(From, In);
-    Out = lerp(To, In, saturate((Distance - Range) / max(Fuzziness, 1e-5f)));
-}";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0dc0f812d6db77d3d1322954e9c5dc0255693efd91274049c210f2e313b3a1e7
+size 1046

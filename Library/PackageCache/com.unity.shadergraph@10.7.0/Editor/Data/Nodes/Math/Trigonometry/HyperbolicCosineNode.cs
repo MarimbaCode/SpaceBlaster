@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Trigonometry", "Hyperbolic Cosine")]
-    class HyperbolicCosineNode : CodeFunctionNode
-    {
-        public HyperbolicCosineNode()
-        {
-            name = "Hyperbolic Cosine";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_HyperbolicCosine", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_HyperbolicCosine(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = sinh(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:68a1e9d9760987a9feec1573890ffb88c52987ff84a13def3683a26daf29f6e5
+size 739

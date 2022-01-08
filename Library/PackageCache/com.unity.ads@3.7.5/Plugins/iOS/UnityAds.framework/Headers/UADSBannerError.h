@@ -1,18 +1,3 @@
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-typedef NS_ENUM (NSInteger, UADSBannerErrorCode) {
-    UADSBannerErrorCodeUnknown      = 0,
-    UADSBannerErrorCodeNativeError  = 1,
-    UADSBannerErrorCodeWebViewError = 2,
-    UADSBannerErrorCodeNoFillError  = 3
-};
-
-@interface UADSBannerError : NSError
-
-- (instancetype)initWithCode: (UADSBannerErrorCode)code userInfo: (nullable NSDictionary<NSErrorUserInfoKey, id> *)dict;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d1f7cabdcf224a13b082fcc196662fef21f728e2d742dd3258ebeb0ac8806bb
+size 466

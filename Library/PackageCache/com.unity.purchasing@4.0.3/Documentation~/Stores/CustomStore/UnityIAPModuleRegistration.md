@@ -1,21 +1,3 @@
-Registering your store
-======================
-
-Call the ``RegisterStore`` method supplying a name for your store and your implementation, which must implement the IStore interface.
-
-````
-public override void Configure() {
-    RegisterStore(“GooglePlay”, InstantiateMyStore());
-}
-
-private void InstantiateMyStore() {
-    if (Application.platform == RuntimePlatform.Android) {
-        return new MyAlternativeGooglePlayImplementation ();
-    }
-    return null;
-}
-````
-
-The store name must match the name developers use when defining products for your store so Unity IAP uses the correct product identifiers when addressing your store.
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:36ccdd800d8e23eb3dbcb4b21c6b0cd5ab2e19db30fba7b263673aab14e5ca49
+size 639

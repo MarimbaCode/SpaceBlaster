@@ -1,15 +1,3 @@
-@interface UMONItemBuilder : NSObject
-@property (strong, nonatomic) NSString *productId;
-@property (nonatomic) double quantity;
-@property (strong, nonatomic) NSString *type;
-@end
-
-@interface UMONItem : NSObject
-+ (instancetype)build: (void (^)(UMONItemBuilder *))buildBlock;
-
-- (instancetype)initWithBuilder: (UMONItemBuilder *)builder;
-
-@property (nonatomic, strong, readonly) NSString *productId;
-@property (nonatomic, readonly) double quantity;
-@property (nonatomic, strong, readonly) NSString *type;
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a868281478c2702367670938a96877638b69d56b034992d9d76a349436ca231f
+size 509

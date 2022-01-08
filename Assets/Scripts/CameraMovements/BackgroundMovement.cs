@@ -1,23 +1,3 @@
-﻿using UnityEngine;
-
-namespace CameraMovements
-{
-    public class BackgroundMovement : MonoBehaviour
-    {
-        private Transform _cameraTransform;
-
-        public Vector2 startOffset;
-// Update is called once per frame
-        void Update()
-        {
-
-            _cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
-            
-            Vector3 newPos = (Vector3) startOffset + _cameraTransform.position * -0.2f + _cameraTransform.position;
-
-            newPos.z = 10;
-
-            transform.position = newPos;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02028b6bd010f99bd9eb0f07b2813129990f574a0a1ef75b1a7ed4397fa90bf6
+size 576

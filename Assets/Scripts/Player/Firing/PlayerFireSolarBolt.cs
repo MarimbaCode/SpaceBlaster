@@ -1,29 +1,3 @@
-﻿using UnityEngine;
-
-namespace Player.Firing
-{
-    public class PlayerFireSolarBolt : PlayerFiring
-    {
-        public int speed;
-
-        public GameObject bulletPrefab;
-        private void Start()
-        {
-            Init();
-
-            FireSpeed = 0.6f;
-
-            bulletPrefab = Resources.Load(PrefabPath + "SolarBolt") as GameObject;
-        }
-
-        public override void Fire()
-        {
-            GameObject projectile = Instantiate(bulletPrefab, transform.position + (Vector3)(AimDirection.normalized * 0.2f), Quaternion.identity);
-            SolarBoltMovement movement = projectile.GetComponent<SolarBoltMovement>();
-            movement.side = "player";
-            movement.pierce = 1;
-            movement.damage = 1;
-            movement.direction = AimDirection.normalized * 6;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e08bd8613eda871f91e61f38f728496f5ceb13597e1468259aaa2dbe9f03753
+size 841

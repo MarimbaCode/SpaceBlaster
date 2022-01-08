@@ -1,18 +1,3 @@
-# Extensions
-
-## Extended functionality
-
-### Amazon User ID
-
-To fetch the current Amazon User ID for other Amazon services, use the `IAmazonExtensions`:
-
-````
-public void OnInitialized
-    (IStoreController controller, IExtensionProvider extensions)
-{
-    string amazonUserId = 
-        extensions.GetExtension<IAmazonExtensions>().amazonUserId;
-    // ...
-}
-````
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f826f548d759131cca2dc95891ee6ff57d3b99b9ffc8a9044b30623ce5094b73
+size 365

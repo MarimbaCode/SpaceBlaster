@@ -1,15 +1,3 @@
-﻿namespace UnityEditor.ShaderGraph
-{
-    [GenerationAPI]
-    internal class FieldCondition
-    {
-        public FieldDescriptor field { get; }
-        public bool condition { get; }
-
-        public FieldCondition(FieldDescriptor field, bool condition)
-        {
-            this.field = field;
-            this.condition = condition;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff7a4940a9cd394fc25ac233b77f7345f9c0cc4c1c2318685e035a9d03a0fcae
+size 354

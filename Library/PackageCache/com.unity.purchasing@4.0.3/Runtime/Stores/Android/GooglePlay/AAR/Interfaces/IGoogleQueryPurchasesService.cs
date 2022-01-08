@@ -1,11 +1,3 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine.Purchasing.Models;
-
-namespace UnityEngine.Purchasing.Interfaces
-{
-    interface IGoogleQueryPurchasesService
-    {
-        void QueryPurchases(Action<List<GooglePurchase>> onQueryPurchaseSucceed);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:13e7f1ed8470209e558d481dbdc7cb8704ac7844a75b40450994e3e4807f3201
+size 271

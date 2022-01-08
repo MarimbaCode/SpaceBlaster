@@ -1,32 +1,3 @@
-#ifndef SG_LIT_META_INCLUDED
-#define SG_LIT_META_INCLUDED
-
-PackedVaryings vert(Attributes input)
-{
-    Varyings output = (Varyings)0;
-    output = BuildVaryings(input);
-    PackedVaryings packedOutput = (PackedVaryings)0;
-    packedOutput = PackVaryings(output);
-    return packedOutput;
-}
-
-half4 frag(PackedVaryings packedInput) : SV_TARGET 
-{    
-    Varyings unpacked = UnpackVaryings(packedInput);
-    UNITY_SETUP_INSTANCE_ID(unpacked);
-
-    SurfaceDescriptionInputs surfaceDescriptionInputs = BuildSurfaceDescriptionInputs(unpacked);
-    SurfaceDescription surfaceDescription = SurfaceDescriptionFunction(surfaceDescriptionInputs);
-
-    #if _AlphaClip
-        clip(surfaceDescription.Alpha - surfaceDescription.AlphaClipThreshold);
-    #endif
-
-    MetaInput metaInput = (MetaInput)0;
-    metaInput.Albedo = surfaceDescription.BaseColor;
-    metaInput.Emission = surfaceDescription.Emission;
-
-    return MetaFragment(metaInput);
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:17ff6a84f589aef0084a1833943e4796e8640c0552834a40e84b47e4e7dcbd72
+size 943

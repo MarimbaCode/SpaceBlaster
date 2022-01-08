@@ -1,32 +1,3 @@
-using System;
-using UnityEditor.Graphing;
-using UnityEngine;
-using UnityEditor.ShaderGraph.Drawing.Slots;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Serializable]
-    class VertexColorMaterialSlot : Vector4MaterialSlot, IMayRequireScreenPosition
-    {
-        public VertexColorMaterialSlot(int slotId, string displayName, string shaderOutputName,
-                                       ShaderStageCapability stageCapability = ShaderStageCapability.All, bool hidden = false)
-            : base(slotId, displayName, shaderOutputName, SlotType.Input, Vector3.zero, stageCapability, hidden: hidden)
-        {}
-
-        public override VisualElement InstantiateControl()
-        {
-            return new LabelSlotControlView("Vertex Color");
-        }
-
-        public override string GetDefaultValue(GenerationMode generationMode)
-        {
-            return string.Format("IN.{0}", ShaderGeneratorNames.VertexColor);
-        }
-
-        public bool RequiresScreenPosition(ShaderStageCapability stageCapability)
-        {
-            return !isConnected;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de682ace17001a2fe9cdb9ca72f8d9f1a03863bca192a18ac21ea8ab16d39618
+size 1098

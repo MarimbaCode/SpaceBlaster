@@ -1,28 +1,3 @@
-﻿namespace UnityEngine.Purchasing.Default
-{
-    /// <summary>
-    /// A factory for creating WinRT Store objects.
-    /// </summary>
-    public class Factory
-    {
-        /// <summary>
-        /// Creates a <c>WinRTStore</c> objects.
-        /// </summary>
-        /// <param name="mocked"> Whether or not to use a mock store. </param>
-        /// <returns> The instance of the <c>WinRTStore</c> created</returns>
-        public static IWindowsIAP Create(bool mocked)
-        {
-            ICurrentApp app;
-            if (mocked)
-            {
-                app = new UnibillCurrentAppSimulator();
-            }
-            else
-            {
-                app = new CurrentApp();
-            }
-
-            return new WinRTStore(app);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d5f3b0e5ad28e8647eda901a3af8309475ca488b48b77164392ce18a48cd193
+size 762

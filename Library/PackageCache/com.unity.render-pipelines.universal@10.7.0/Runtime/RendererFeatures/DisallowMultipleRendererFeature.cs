@@ -1,12 +1,3 @@
-﻿using System;
-
-namespace UnityEngine.Rendering.Universal
-{
-    /// <summary>
-    ///   <para>Prevents ScriptableRendererFeatures of same type to be added more than once to a Scriptable Renderer.</para>
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class)]
-    internal class DisallowMultipleRendererFeature : Attribute
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41d189b0bf56d9db56e7ea7da59555e3cd6ec8e6023b5eaf49a563682a0a243c
+size 346

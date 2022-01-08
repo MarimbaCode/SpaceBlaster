@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Trigonometry", "Hyperbolic Tangent")]
-    class HyperbolicTangentNode : CodeFunctionNode
-    {
-        public HyperbolicTangentNode()
-        {
-            name = "Hyperbolic Tangent";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_HyperbolicTangent", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_HyperbolicTangent(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = tanh(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:364c3cfe3e630ec99bdd11d840427751baa9b4aa985209f7102b806733ed8d55
+size 745

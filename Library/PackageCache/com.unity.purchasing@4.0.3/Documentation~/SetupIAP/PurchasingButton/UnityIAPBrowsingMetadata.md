@@ -1,12 +1,3 @@
-# Browsing Product Metadata
-
-Unity IAP retrieves localized product metadata during the initialization process, which you can access via the ``IStoreController`` products field.
-
-````
-foreach (var product in controller.products.all) {
-    Debug.Log (product.metadata.localizedTitle);
-    Debug.Log (product.metadata.localizedDescription);
-    Debug.Log (product.metadata.localizedPriceString);
-}
-````
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:27f83317c174869496166e802f8fea88b2497ba3404a53c27fdbf0a38019cff1
+size 401

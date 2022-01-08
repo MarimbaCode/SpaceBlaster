@@ -1,32 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Range", "Clamp")]
-    class ClampNode : CodeFunctionNode
-    {
-        public ClampNode()
-        {
-            name = "Clamp";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Clamp", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Clamp(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] DynamicDimensionVector Min,
-            [Slot(2, Binding.None, 1, 1, 1, 1)] DynamicDimensionVector Max,
-            [Slot(3, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = clamp(In, Min, Max);
-}";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:be13795b9b55a08b194aa2d7817a62e1ceaf126bc39de385df535d49bed57958
+size 814

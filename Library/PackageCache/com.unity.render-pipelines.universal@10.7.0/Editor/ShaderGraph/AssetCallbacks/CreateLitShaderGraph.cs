@@ -1,30 +1,3 @@
-﻿using System;
-using UnityEditor.ShaderGraph;
-
-namespace UnityEditor.Rendering.Universal.ShaderGraph
-{
-    static class CreateLitShaderGraph
-    {
-        [MenuItem("Assets/Create/Shader/Universal Render Pipeline/Lit Shader Graph", false, 300)]
-        public static void CreateLitGraph()
-        {
-            var target = (UniversalTarget)Activator.CreateInstance(typeof(UniversalTarget));
-            target.TrySetActiveSubTarget(typeof(UniversalLitSubTarget));
-
-            var blockDescriptors = new [] 
-            { 
-                BlockFields.VertexDescription.Position,
-                BlockFields.VertexDescription.Normal,
-                BlockFields.VertexDescription.Tangent,
-                BlockFields.SurfaceDescription.BaseColor,
-                BlockFields.SurfaceDescription.NormalTS, 
-                BlockFields.SurfaceDescription.Metallic,
-                BlockFields.SurfaceDescription.Smoothness, 
-                BlockFields.SurfaceDescription.Emission,
-                BlockFields.SurfaceDescription.Occlusion,
-            };
-
-            GraphUtil.CreateNewGraphWithOutputs(new [] {target}, blockDescriptors);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:90686bbf67c8e0b885a40e5ab306679ca3797f00bdc2580576041faaa6866fb6
+size 1157

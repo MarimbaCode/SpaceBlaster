@@ -1,5 +1,3 @@
-{
-  "displayName": "Google Play Store - 01 Upgrading and Downgrading Subscriptions",
-  "description": "This sample showcases how to use the Google Play Store extensions to upgrade and downgrade subscriptions. This allows players to change their subscription, and pay a different amount of money for a different level of service.",
-  "createSeparatePackage": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:68dd98d71320c44433bcab18db2319193d8747d317c3c9184a04cdab85d92533
+size 366

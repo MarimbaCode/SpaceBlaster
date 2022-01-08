@@ -1,20 +1,3 @@
-#import <UnityAds/UnityMonetizationPlacementContentState.h>
-#import <UnityAds/UMONCustomEvent.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UMONPlacementContent : NSObject
-- (instancetype)initWithPlacementId: (NSString *)placementId withParams: (NSDictionary *)params;
-
-@property (nonatomic, readonly, getter = isReady) BOOL ready;
-@property (nonatomic, readonly) NSString *type;
-@property (retain, nonatomic, readonly) NSString *placementId;
-@property (nonatomic) UnityMonetizationPlacementContentState state;
-@property (nonatomic) NSDictionary *userInfo;
-- (void)sendCustomEvent: (UMONCustomEvent *)customEvent;
-- (void)sendCustomEvent: (NSString *)type withUserInfo: (NSDictionary<NSString *, NSObject *> *__nullable)userInfo;
-- (void)sendCustomEventWithType: (NSString *)type;
-- (NSString *)  defaultEventCategory;
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9982805348b516a151f92e879fa9de4652963f7106e88a7d4bb72eb1b0414f6
+size 841

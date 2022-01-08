@@ -1,33 +1,3 @@
-﻿using System;
-using Player;
-using UnityEngine;
-
-namespace Enemy
-{
-    public class StrengthTrigger : MonoBehaviour
-    {
-        public float scaleMultiplier = 1;
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            GameObject player = GameObject.FindWithTag("Player");
-            if (other.gameObject.Equals(player))
-            {
-                PlayerStrengthScale strengthScale = player.GetComponent<PlayerStrengthScale>();
-
-                strengthScale.multiplier = scaleMultiplier;
-            }
-        }
-        
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            GameObject player = GameObject.FindWithTag("Player");
-            if (other.gameObject.Equals(player))
-            {
-                PlayerStrengthScale strengthScale = player.GetComponent<PlayerStrengthScale>();
-
-                strengthScale.multiplier = 1;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db3e42885c86e6255574dbf3d7e156442ff83b40861c1dfd7aae99e1e0406065
+size 907

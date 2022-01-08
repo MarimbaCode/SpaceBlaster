@@ -1,17 +1,3 @@
-﻿using System;
-namespace UnityEngine.Purchasing
-{
-    /// <summary>
-    /// Class containing store information for Universal Windows Platform builds.
-    /// </summary>
-	public class WindowsStore
-	{
-		// The value of this constant must be left as 'WinRT' for legacy reasons.
-		// It may be hard coded inside Applications and elsewhere, such that changing
-		// it would cause breakage.
-        /// <summary>
-        /// The name of the store used for Universal Windows Platform builds.
-        /// </summary>
-		public const string Name = "WinRT";
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5fdb4068f970bd18f0780040e8dc4b542c00658c159bf5149106ce4251c39040
+size 553

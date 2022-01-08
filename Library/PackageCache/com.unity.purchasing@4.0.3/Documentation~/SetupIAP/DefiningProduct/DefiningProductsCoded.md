@@ -1,17 +1,3 @@
-# Defining Products in scripts
-
-You can declare your Product list programmatically using the [Purchasing Configuration Builder](xref:UnityEngine.Purchasing.ConfigurationBuilder). 
-You must provide a unique cross-store __Product ID__ and __Product Type__ for each Product:
-
-````
-using UnityEngine;
-using UnityEngine.Purchasing;
-
-public class MyIAPManager {
-    public MyIAPManager () {
-        var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
-        builder.AddProduct("100_gold_coins", ProductType.Consumable);
-        // Initialize Unity IAP...
-    }
-}
-````
+version https://git-lfs.github.com/spec/v1
+oid sha256:dadc3e3a4d895be571f8d67e21e5c0d85495028754464f619ec9c8c255db0b23
+size 593

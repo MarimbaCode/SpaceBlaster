@@ -1,22 +1,3 @@
-
-
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.Analytics;
-using UnityEditor.Web;
-
-namespace UnityEditor.Analytics
-{
-    [InitializeOnLoad]
-    class AnalyticsEventTrackerEditorCallbacks
-    {
-        static AnalyticsEventTrackerEditorCallbacks()
-        {
-			bool useCEFServiceMenu = true;
-			#if UNITY_2020_1_OR_NEWER
-			useCEFServiceMenu = false;
-			#endif
-            AnalyticsEventTrackerEditor.SetServiceMenuDelegate(useCEFServiceMenu);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eeb5f94efeb34cba451006a65ac57b029fbcc9073d23303677faf325b7b2bac3
+size 471

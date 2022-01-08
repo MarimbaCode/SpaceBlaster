@@ -1,22 +1,3 @@
-# Node Library
-
-## Description
-
-The **Node Library** contains documentation for all the individual [Nodes](Node.md) in [Shader Graph](Shader-Graph.md); including descriptions, ports, parameters, shader code and example images. The [Nodes](Node.md) are organised in the same categories as found in the [Create Node Menu](Create-Node-Menu.md) for convenience.
-
-## Graph Nodes
-
-| | |
-|:--|:--|
-| [Artistic](Artistic-Nodes.md)| [Channel](Channel-Nodes.md)|
-| [Input](Input-Nodes.md) | [Math](Math-Nodes.md) |
-| [Procedural](Procedural-Nodes.md) | [Utility](Utility-Nodes.md)|
-| [UV](UV-Nodes.md) | |
-
-
-## Block Nodes
-
-| | |
-|:-|:-|
-| [Built In](Built-In-Nodes.md) |  |
-| Universal | High Definition |
+version https://git-lfs.github.com/spec/v1
+oid sha256:905d4acf2aee6e33a225cb755eacad67b79e131e8f93b90bf2764000b3046154
+size 696

@@ -1,14 +1,3 @@
-{
-    "name": "Unity.InternalAPIEngineBridge.003",
-    "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2fcd568f3ba77ab59b23fd4895b6099d07bbb1fadc635b291efb163816da8da
+size 366

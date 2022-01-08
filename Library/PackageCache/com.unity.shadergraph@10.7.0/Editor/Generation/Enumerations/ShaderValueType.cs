@@ -1,18 +1,3 @@
-﻿namespace UnityEditor.ShaderGraph
-{
-    [GenerationAPI]
-    internal enum ShaderValueType
-    {
-        Boolean,
-        Float,
-        Float2,
-        Float3,
-        Float4,
-        Matrix2,
-        Matrix3,
-        Matrix4,
-        Integer,
-        Uint,
-        Uint4,
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:902db4ed39762612fbe185701a9d3384625ea84a11e0093979ab25ad1226d498
+size 284

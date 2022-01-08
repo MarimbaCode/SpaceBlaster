@@ -1,17 +1,3 @@
-{
-    "name": "UnityEngine.Purchasing.WinRT",
-    "references": [
-        "UnityEngine.Purchasing.WinRTCore"
-    ],
-    "includePlatforms": [
-        "WSA"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": false,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:74a11486daab646cbbaab4ae1598dcca072e7387b4d7c3f95a93fa7b4b041406
+size 404

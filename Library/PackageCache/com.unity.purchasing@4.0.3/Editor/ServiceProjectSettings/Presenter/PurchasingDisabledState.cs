@@ -1,25 +1,3 @@
-namespace UnityEditor.Purchasing
-{
-    internal class PurchasingDisabledState : BasePurchasingState
-    {
-        internal const string k_StateNameDisabled = "DisabledState";
-
-        public PurchasingDisabledState(SimpleStateMachine<PurchasingServiceToggleEvent> stateMachine)
-            : base(k_StateNameDisabled, stateMachine)
-        {
-            ModifyActionForEvent(PurchasingServiceToggleEvent.Enabled, HandleEnabling);
-        }
-
-        SimpleStateMachine<PurchasingServiceToggleEvent>.State HandleEnabling(PurchasingServiceToggleEvent raisedEvent)
-        {
-            return stateMachine.GetStateByName(PurchasingEnabledState.k_StateNameEnabled);
-        }
-
-        protected override AnalyticsNoticeBlock CreateAnalyticsNoticeBlock()
-        {
-            return AnalyticsNoticeBlock.CreateDisabledAnalyticsBlock();
-        }
-
-        internal override bool IsEnabled() => false;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d7a463bbc6a1c2aed5bde7ace8f683a80eabb48f04de89c609aeff24eb7c7ec
+size 904

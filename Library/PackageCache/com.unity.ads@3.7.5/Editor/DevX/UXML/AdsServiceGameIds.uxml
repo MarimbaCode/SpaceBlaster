@@ -1,8 +1,3 @@
-<UXML xmlns="UnityEngine.UIElements">
-    <VisualElement class="project-settings-section-container">
-        <Label text="Game Id" class="project-settings-title"/>
-        <TextField name="AndroidGameId" text="N/A" label="Android" readonly="true"/>
-        <TextField name="AppleGameId" text="N/A" label="iOS" readonly="true"/>
-    </VisualElement>
-    <VisualElement class="separator"/>
-</UXML>
+version https://git-lfs.github.com/spec/v1
+oid sha256:1257351a60994bd7a076bed6b3c73ae3b57907735f3335f9dbe2cc4c714f6004
+size 396

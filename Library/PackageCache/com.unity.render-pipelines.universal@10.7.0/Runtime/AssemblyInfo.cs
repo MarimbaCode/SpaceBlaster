@@ -1,7 +1,3 @@
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("UniversalGraphicsTests")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Universal.Editor")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Universal.Editor.Tests")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Universal.Runtime.Tests")]
-[assembly: InternalsVisibleTo("Unity.GraphicTests.Performance.Universal.Runtime")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:24f5ef82830a1bd851ba83caf632f2078bb29133be7fde91e4a4001fa0209fe1
+size 411

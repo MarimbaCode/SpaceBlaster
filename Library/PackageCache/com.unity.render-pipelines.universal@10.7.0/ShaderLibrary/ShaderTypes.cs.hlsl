@@ -1,27 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit / Render Pipeline / Generate Shader Includes ] instead
-//
-
-#ifndef SHADERTYPES_CS_HLSL
-#define SHADERTYPES_CS_HLSL
-// Generated from UnityEngine.Rendering.Universal.ShaderInput+LightData
-// PackingRules = Exact
-struct LightData
-{
-    float4 position;
-    float4 color;
-    float4 attenuation;
-    float4 spotDirection;
-    float4 occlusionProbeChannels;
-};
-
-// Generated from UnityEngine.Rendering.Universal.ShaderInput+ShadowData
-// PackingRules = Exact
-struct ShadowData
-{
-    float4x4 worldToShadowMatrix;
-    float4 shadowParams;
-};
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:c600459fd19e7ded2d8c8b81fe6c98f1ee92c565fd17beca93475e2d489fed74
+size 648

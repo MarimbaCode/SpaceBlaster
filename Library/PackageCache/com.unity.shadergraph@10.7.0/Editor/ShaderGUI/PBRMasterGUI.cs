@@ -1,20 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    class PBRMasterGUI : ShaderGUI
-    {
-        public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] props)
-        {
-			materialEditor.PropertiesDefaultGUI(props);
-
-            Material material = materialEditor.target as Material;
-
-            if (materialEditor.EmissionEnabledProperty())
-            {
-                material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive;
-            } 
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:687beb2b98d0a34cd0b50fbfa161144156e3e6ea7c8d1a178cb1f669ffd3de93
+size 535

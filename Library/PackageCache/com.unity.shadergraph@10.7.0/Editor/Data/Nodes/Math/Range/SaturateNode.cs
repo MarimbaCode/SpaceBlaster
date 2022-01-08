@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Range", "Saturate")]
-    class SaturateNode : CodeFunctionNode
-    {
-        public SaturateNode()
-        {
-            name = "Saturate";
-        }
-
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_Saturate", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_Saturate(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-                @"
-{
-    Out = saturate(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f69bd46a2e050d44f764315a6533db3a0e895127f22119382fd501f7ce7fdbfa
+size 686

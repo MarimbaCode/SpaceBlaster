@@ -1,23 +1,3 @@
-# Is NaN Node
-
-## Description
-
-Returns true if the input **In** is not a number (NaN). This is useful for [Branching](Branch-Node.md).
-
-## Ports
-
-| Name        | Direction           | Type  | Binding | Description |
-|:------------ |:-------------|:-----|:---|:---|
-| In      | Input | Float    | None | Input value |
-| Out | Output      |    Boolean | None | Output value |
-
-## Generated Code Example
-
-The following example code represents one possible outcome of this node.
-
-```
-void Unity_IsNan_float(float In, out float Out)
-{
-    Out = (In < 0.0 || In > 0.0 || In == 0.0) ? 0 : 1;
-}
-```
+version https://git-lfs.github.com/spec/v1
+oid sha256:896953839337960515e138b8d388c687f528251583257c342bff61de342059ea
+size 590

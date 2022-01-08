@@ -1,14 +1,3 @@
-﻿using System;
-
-namespace UnityEngine.Purchasing
-{
-	/// <summary>
-	/// JSON based Native callback interface.
-	/// </summary>
-	internal interface IUnityCallback {
-		void OnSetupFailed(String json);
-		void OnProductsRetrieved(String json);
-		void OnPurchaseSucceeded(String id, String receipt, String transactionID);
-		void OnPurchaseFailed(String json);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e13ad1a4e71631a4945dce19eb7b95c3dce5afa0b7df6ec9e8183804740babc
+size 360

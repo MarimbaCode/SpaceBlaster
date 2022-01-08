@@ -1,24 +1,3 @@
-using System;
-using System.Collections.Generic;
-using UnityEditor.Compilation;
-
-namespace Packages.Rider.Editor.ProjectGeneration
-{
-  internal interface IAssemblyNameProvider
-  {
-    string[] ProjectSupportedExtensions { get; }
-    string ProjectGenerationRootNamespace { get; }
-    ProjectGenerationFlag ProjectGenerationFlag { get; }
-
-    string GetAssemblyNameFromScriptPath(string path);
-    string GetProjectName(string assemblyOutputPath, string assemblyName);
-    bool IsInternalizedPackagePath(string path);
-    IEnumerable<Assembly> GetAssemblies(Func<string, bool> shouldFileBePartOfSolution);
-    IEnumerable<string> GetAllAssetPaths();
-    UnityEditor.PackageManager.PackageInfo FindForAssetPath(string assetPath);
-    ResponseFileData ParseResponseFile(string responseFilePath, string projectDirectory, string[] systemReferenceDirectories);
-    IEnumerable<string> GetRoslynAnalyzerPaths();
-    void ToggleProjectGeneration(ProjectGenerationFlag preference);
-    void ResetPackageInfoCache();
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6118df0aa47dbfaa6e4b273fcb7be0572697652cb26399e80c1922b475e424e
+size 1011

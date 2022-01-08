@@ -1,11 +1,3 @@
-#import <UnityAds/USRVJsonStorage.h>
-
-@interface UADSMetaData : USRVJsonStorage
-
-@property (nonatomic, strong) NSString *category;
-
-- (instancetype)initWithCategory: (NSString *)category;
-- (BOOL)setRaw: (NSString *)key value: (id)value;
-- (void)        commit;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:63f39c51569621762d786afbd9f7bf4c338697856816259f126be1947c4bddc3
+size 268

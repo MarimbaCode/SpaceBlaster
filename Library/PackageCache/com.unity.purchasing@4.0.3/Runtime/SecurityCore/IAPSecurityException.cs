@@ -1,27 +1,3 @@
-﻿using System;
-
-namespace UnityEngine.Purchasing.Security
-{
-    /// <summary>
-    /// A base exception for IAP Security issues.
-    /// </summary>
-	public class IAPSecurityException : System.Exception
-    {
-        /// <summary>
-        /// Constructs an instance with no message.
-        /// </summary>
-		public IAPSecurityException() { }
-
-        /// <summary>
-        /// Constructs an instance with a message.
-        /// </summary>
-        /// <param name="message"> The message that describes the error. </param>
-		public IAPSecurityException(string message) : base(message) {
-		}
-	}
-
-    /// <summary>
-    /// An exception for an invalid IAP Security signature.
-    /// </summary>
-	public class InvalidSignatureException : IAPSecurityException {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c29bd9046a8b1e42c71c794876c13cbe7f1dbee0eb90d2ee8d5ad4e2f9e47d5d
+size 758
